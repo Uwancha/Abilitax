@@ -7,7 +7,8 @@
 }
 
 .hero {
-  background-color: rgba(255, 99, 71, 0.827);
+  background-image: url(../../public/computer-3174729_1920.jpg);
+  background-position: center;
   color: #fff;
   height: 500px;
   text-align: center;
@@ -27,12 +28,6 @@
   padding: 4rem 0;
 
   background-color: whitesmoke;
-}
-
-.article-talents h3 {
-  text-align: center;
-  color: rgba(0, 0, 0, 0.92);
-  font-size: 24px;
 }
 
 .talents {
@@ -56,12 +51,14 @@
 
 .article-about h2 {
   text-align: center;
-  color: tomato;
+  color: slategray;
+  font-weight: 700;
 }
 
 .article-about p {
-  margin-left: 2rem;
-  font-size: 20px;
+  font-size: 18px;
+  color: rgba(112, 128, 144, 0.691);
+  font-weight: 600;
 }
 
 .skill-card {
@@ -70,18 +67,6 @@
   gap: 1rem;
   border-radius: 8px;
   background-color: #fff;
-}
-
-.skill-card p{
-  font-size: 18px;
-  color: black;
-  padding-left: 2rem;
-}
-
-.skill-card h4 {
-  font-size: 26px;
-  color: black;
-  padding-left: 2rem;
 }
 
 .skill-image {
@@ -93,7 +78,6 @@
 
 .skill-card a {
   font-size: 18px;
-  padding-left: 2rem;
   text-decoration: none;
   color: darkblue;
 }
