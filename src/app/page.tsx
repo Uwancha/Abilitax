@@ -8,10 +8,13 @@ import willAIImage from "../../public/artificial-intelligence-3382507_640.jpg";
 import aiImage from "../../public/artificial-intelligence-6767502_640.jpg";
 import pickSkillsImage from "../../public/cartoon-3082809_640.png";
 import projectIdeasImage from "../../public/website-3374825_640.jpg"
+import Nav from "./components/Header";
+
 
 export default function Home() {
   return (
     <main>
+        <Nav />
       <div className="home">
             <article className="hero">
                 <h1>
