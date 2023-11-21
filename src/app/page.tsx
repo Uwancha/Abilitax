@@ -9,7 +9,6 @@ import aiImage from "../../public/artificial-intelligence-6767502_640.jpg";
 import pickSkillsImage from "../../public/cartoon-3082809_640.png";
 import projectIdeasImage from "../../public/website-3374825_640.jpg"
 
-
 export default function Home() {
   return (
     <main>
@@ -30,38 +29,38 @@ export default function Home() {
             </article>
 
             <article className="article-talents">
-                <h3>Most Sought-After Talents</h3>
+                <h3 className="text-slategray font-bold text-2xl text-center">Most Sought-After Talents</h3>
                 
                 <div className="talents">
                     <section className="skill-card py-5"> 
-                        <h4>Software Engineering</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">Software Engineering</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
-                        <h4>Data Science</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">Data Science</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
-                        <h4>Cloud Computing</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">Cloud Computing</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
-                        <h4>UI/UX Design</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">UI/UX Design</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
-                        <h4>Video Editing</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">Video Editing</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
-                        <h4>Digital Marketing</h4>
-                        <p>A brief introduction about the skill...</p>
-                        <a href="">Learn More</a>
+                        <h4 className="text-slategray font-bold text-xl pl-5">Digital Marketing</h4>
+                        <p className="text-slategray pl-5">A brief introduction about the skill...</p>
+                        <Link href="" className="pl-5">Learn More</Link>
                     </section>
                 </div>
 
