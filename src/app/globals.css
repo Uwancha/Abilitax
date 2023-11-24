@@ -173,8 +173,6 @@ body {
 .skills {
   margin-top: 4rem;
   background-color: whitesmoke;
-
-  overflow-y: scroll;
 }
 
 .skill-details {
