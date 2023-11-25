@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import { db } from '@/app/firebaseConfig'
 import {doc, onSnapshot } from 'firebase/firestore'
 import Link from 'next/link';
-//import Nav from '@/app/components/Header';
 
 function getSkillDetails(id) {
   const docref = doc(db, 'skills', id);
@@ -32,6 +31,8 @@ export default function SkillDetails({id}) {
    
     let resourceElements;
     let courseElements;
+    let books;
+    let ytChannels;
 
     if(details?.resources) {
       resourceElements = details.resources.map(resource => (
@@ -45,10 +46,30 @@ export default function SkillDetails({id}) {
 
     if(details?.courses) {
       courseElements = details.courses.map(course => (
-        <div key={course.name} className='my-5'>
-          <h3 className='text-center  mb-3  font-bold'>{course.name}</h3>
+        <div key={course.name} className='pt-10'>
+          <h3 className='mb-3  font-bold'>{course.name}</h3>
           <p>{course.about}</p>
           <Link href={course.website} className='link'>{course.name}</Link>
+        </div>
+      ));
+    }
+
+    if(details?.books) {
+      books = details.books.map(book => (
+        <div key={book.name} className='pl-10 my-5'>
+          <h3 className='mb-3  font-bold'>{book.name}</h3>
+          <p>{book.about}</p>
+          <Link href={book.link} className='link'>{book.name}</Link>
+        </div>
+      ));
+    }
+
+    if(details?.youtube) {
+      ytChannels = details.youtube.map(yt => (
+        <div key={yt.name} className='pl-10 my-5'>
+          <h3 className='mb-3  font-bold'>{yt.name}</h3>
+          <p>{yt.about}</p>
+          <Link href={yt.link} className='link'>{yt.name}</Link>
         </div>
       ));
     }
@@ -63,7 +84,18 @@ export default function SkillDetails({id}) {
             Here I list what you need to kick start your journey into the world of {details?.name}
           </p>
           <div>{resourceElements}</div>
-          <div>{courseElements}</div>
+          <div className='my-10' >
+            <h2 className='text-slategray text-2xl font-bold' >Professional Certificates</h2>
+            {courseElements}
+          </div>
+          <div className='my-10' >
+            <h2  className='text-slategray text-2xl font-bold mb-5 ' >Books</h2>
+            {books}
+          </div>
+          <div className='my-10' >
+            <h2  className='text-slategray text-2xl font-bold mb-5 ' >YouTube Channels</h2>
+            {ytChannels}
+          </div>
         </section>
       </div>
   )
