@@ -17,7 +17,7 @@ export default function Home() {
         <Nav />
       <div className="home">
             <article className="hero">
-                <h1>
+                <h1 className="text-2xl font-bold">
                  Home of curated resources for your first or next carrier!
                 </h1>
             </article>
@@ -70,74 +70,74 @@ export default function Home() {
             </article>
 
             <article className="article-blog">
-                <h3>Some of the Best Tips for Your Journey</h3>
+                <h4 className="text-slategray text-center font-bold text-2xl" >Some of the Best Tips for Your Journey</h4>
                 
                 <div className="featured-blogs">
                     <section className="blog-card py-5" >
-                        <h4>What is a rabbit hole and how to escape it</h4>
+                        <h4 className="text-slategray font-bold text-xl" >What is a rabbit hole and how to escape it</h4>
                         <Image 
                           src={rabbitHoleImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>  
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>  
                     </section>
                     <section className="blog-card py-5" >
-                        <h4>What is a tutorial hell</h4>
+                        <h4 className="text-slategray font-bold text-xl " >What is a tutorial hell</h4>
                         <Image 
                           src={tutorailHellImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>
                     </section>
                     <section className="blog-card py-5" >
-                        <h4>Which skill Should I pick?</h4>
+                        <h4 className="text-slategray font-bold text-xl " >Which skill Should I pick?</h4>
                         <Image 
                           src={pickSkillsImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>
                     </section>
                     <section className="blog-card py-5" >
-                        <h4>How to use AI as an aspiring Developer</h4>
+                        <h4 className="text-slategray font-bold text-xl " >How to use AI as an aspiring Developer</h4>
                         <Image 
                           src={aiImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>
                     </section>
                     <section className="blog-card py-5">
-                        <h4>Will AI replace programmers?</h4>
+                        <h4 className="text-slategray font-bold text-xl "  >Will AI replace programmers?</h4>
                         <Image 
                           src={willAIImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>
                     </section>
                     <section className="blog-card py-5">
-                        <h4>5 best Project ideas for front-end developer</h4>
+                        <h4 className="text-slategray font-bold text-xl" >5 best Project ideas for front-end developer</h4>
                         <Image 
                           src={projectIdeasImage}
                           width={40} alt={""}
                           quality={100}
                           className="blog-image"
                         />
-                        <p className="pl-3">A brief introduction about the topic...</p>
-                        <Link href={''}>Continue reading...</Link>
+                        <p className="text-slategray pl-3">A brief introduction about the topic...</p>
+                        <Link href={''} className="link mr-auto pl-3" >Continue reading...</Link>
                     </section>
                 </div>
 
