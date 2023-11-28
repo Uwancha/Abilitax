@@ -196,3 +196,7 @@ body {
 .link:active {
   color: darkblue;
 }
+
+.footer {
+  background-color: whitesmoke;
+}
