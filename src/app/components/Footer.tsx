@@ -10,7 +10,7 @@ import instagramIcon from "../../../public/instagram.svg";
 const Footer: React.FC = () => {
 
     return (
-        <footer className="footer text-slategray flex justify-center gap-20 py-10 border-t">
+        <footer className="footer flex justify-center gap-20 py-10">
                 <div >
                     <h2 className="mb-2 text-xl font-bold">MerekVerse</h2>
                     <p>MerekVerse provides curated resources <br />
