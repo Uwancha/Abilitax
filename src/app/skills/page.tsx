@@ -1,14 +1,13 @@
 import React from 'react';
-import Nav from '../components/Header';
 import SkillsCategories from '../components/SkillCategories';
-import Footer from '../components/Footer';
+import Layout from '../components/layoutSkills';
 
 const Skills: React.FC = () => {
     return (
-        <div className='skills pt-10'>
-            <Nav />
-           <SkillsCategories /> 
-           <Footer />
+        <div className='skills pt-20'>
+            <Layout metaTitle={'Collections of best resources to learn in demand skills'}>
+            <SkillsCategories /> 
+            </Layout>
         </div> 
     )
 }
