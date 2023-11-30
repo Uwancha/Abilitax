@@ -18,18 +18,29 @@ export default function Home() {
         <Nav />
       <div className="home">
             <article className="hero">
-                <h1 className="text-2xl font-bold">
-                 Home of curated resources for your first or next carrier!
+                <h1 className="text-2xl font-bold mt-60 pl-60">
+                 Collections of curated resources for your first or next carrier!
                 </h1>
-            </article>
 
-            <article className="article-about">
-                <h2 className="text-3xl">We're Here For You</h2>
-                <p>
-                    We make the process of learning in-demand skills easy, providing the best curated resources and tips so that you don't have to waste time searching for resources!
-                    Start your learning journey today!
-                </p>
-               
+                <article className="article-about text-xl mt-10 pl-60">
+                    <h2>
+                        Often learning new skill is not frustrating but picking the right resources!
+                    </h2>
+                    <h2 className="mt-4">
+                        We've collections best curaated resources to kick start your learning journey so you don't have to waste time searching them!
+                    </h2>
+
+                    <Link
+                        href="/skills"
+                        className="w-3/4 mr-auto text-center text-white mt-20 py-4
+                        text-xl bg-green border border-green-626 rounded-full shadow-md 
+                        hover:bg-white hover:text-slategray 
+                        hover:border hover:border-green-626
+                        transition duration-500 ease-in-out"
+                    >
+                        Explore
+                    </Link>
+                </article>
             </article>
 
             <article className="article-talents">
@@ -39,32 +50,32 @@ export default function Home() {
                     <section className="skill-card py-5"> 
                         <h4 className="text-slategray font-bold text-xl pl-5">Software Engineering</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Data Science</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Cloud Computing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
                         <h4 className="text-slategray font-bold text-xl pl-5">UI/UX Design</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Video Editing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                     <section className="skill-card py-5" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Digital Marketing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
-                        <Link href="" className="pl-5">Learn More</Link>
+                        <Link href="" className="link pl-5">Learn More</Link>
                     </section>
                 </div>
 
