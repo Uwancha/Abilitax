@@ -10,12 +10,13 @@ import pickSkillsImage from "../../public/cartoon-3082809_640.png";
 import projectIdeasImage from "../../public/website-3374825_640.jpg"
 import Nav from "./components/Header";
 import Footer from "./components/Footer";
+import Layout from "./components/layoutHome";
 
 
 export default function Home() {
   return (
     <main>
-        <Nav />
+    <Layout metaTitle={'dfkndkfjkdfdf'} >
       <div className="home">
             <article className="hero">
                 <h1 className="text-2xl font-bold mt-60 pl-60">
@@ -155,7 +156,7 @@ export default function Home() {
 
             </article>
         </div>
-        <Footer />
+        </Layout>
     </main>
   )
 }
