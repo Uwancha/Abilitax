@@ -86,17 +86,17 @@ export default function SkillDetails({id}) {
     }
   
   return (
-      <div className='w-2/4 mx-auto mt-20 py-10 px-5 bg-white rounded-lg shadow-lg'>
+      <div className='w-2/4 mx-auto mt-20 mb-20 py-10 px-5 bg-white rounded-lg shadow-lg'>
         <h3 className='text-slategray text-2xl text-center font-bold mb-5 '>{details?.name}</h3>
         <p className='text-slategray'>{details?.description}</p>
       
         <section className='my-10 text-slategray'>
-          <h5 className='text-slategray font-bold' >
-            Here I list what you need to kick start your journey into the world of {details?.name}
-          </h5>
+          <h3 className='text-slategray text-xl font-bold' >
+            Resources that you need to kick start your journey into the world of {details?.name}
+          </h3>
           <div>{resourceElements}</div>
           <div className='my-10' >
-            <h2 className='text-slategray text-2xl font-bold' >Professional Certificates</h2>
+            <h2 className='text-slategray text-xl font-bold' >Professional Certificates</h2>
             {courseElements}
           </div>
           <div className='my-10' >
@@ -111,6 +111,13 @@ export default function SkillDetails({id}) {
           <div className='my-10' >
             <h2  className='text-slategray text-2xl font-bold mb-5 ' >Additional Resources</h2>
             {additionalElements}
+          </div>
+
+          <div>
+            <h2 className='text-slategray text-2xl font-bold mb-5 '>Conclusion</h2>
+            <p className='text-slategray pl-10 mb-3'>{details?.conclusion}</p>
+            <p className='text-slategray pl-10  mb-3'>{details?.conclusionmore}</p>
+            <p className='text-slategray pl-10'>{details?.conclusionlast}</p>
           </div>
         </section>
       </div>
