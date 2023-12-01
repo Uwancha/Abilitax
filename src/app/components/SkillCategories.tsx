@@ -47,7 +47,7 @@ const SkillsCategories: React.FC = () => {
   console.log(data);
 
   return (
-    <div>
+    <div className='mb-10'>
       <div>{data?.map(d => (
           <article className='bg-white flex flex-col gap-1 mb-5 mx-auto w-1/2 ' key={d.name}>
             <SkillCard skill={d} />
