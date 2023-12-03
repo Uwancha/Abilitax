@@ -9,23 +9,22 @@ body {
 }
 
 .home {
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .hero {
-  background-image: url(../../public/computer-3174729_1920.jpg);
+  background-image: url(../../public/business-6584073_1280.png);
   background-position: center;
+  background-size: cover;
   color: #fff;
-  height: 500px;
-  text-align: center;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .article-talents {
-  margin: 5rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,18 +46,15 @@ body {
 }
 
 .article-about {
-  margin: 5rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  width: 60%;
+  width: 50%;
 }
 
+
 .article-about h2 {
-  text-align: center;
-  color: slategray;
-  font-weight: 700;
+  color: #ffffffcd;
 }
 
 .article-about p {
@@ -182,11 +178,11 @@ body {
 
 .link {
   text-decoration: none;
-  color: tomato;
+  color: cadetblue;
 }
 
 .link:visited {
-  color: palevioletred;
+  color: cadetblue;
 }
 
 .link:hover {
@@ -198,5 +194,6 @@ body {
 }
 
 .footer {
-  background-color: whitesmoke;
+  background-color: cadetblue;
+  color: #ffffff87;
 }
