@@ -37,10 +37,10 @@ export default function SkillDetails({id}) {
 
     if(details?.resources) {
       resourceElements = details.resources.map(resource => (
-        <div key={resource.name} className='my-5'>
-          <h3 className='text-slategray text-2xl font-bold mb-5'>{resource.name}</h3>
+        <div key={resource.name} className='my-5 pl-10'>
+          <h5 className='text-xl font-bold mb-5'>{resource.name}</h5>
           <p className='pl-10' >{resource.about}</p>
-          <Link href={resource.website} className='link pl-10' >{resource.name}</Link>
+          <Link href={resource.website} className='link' >View Resource</Link>
         </div>
       ));
     }
@@ -48,9 +48,9 @@ export default function SkillDetails({id}) {
     if(details?.courses) {
       courseElements = details.courses.map(course => (
         <div key={course.name} className='pl-10 my-5'>
-          <h3 className='mb-3  font-bold'>{course.name}</h3>
+          <h5 className='mb-3  font-bold'>{course.name}</h5>
           <p>{course.about}</p>
-          <Link href={course.website} className='link'>{course.name}</Link>
+          <Link href={course.website} className='link'>View Resource</Link>
         </div>
       ));
     }
@@ -58,9 +58,9 @@ export default function SkillDetails({id}) {
     if(details?.books) {
       books = details.books.map(book => (
         <div key={book.name} className='pl-10 my-5'>
-          <h3 className='mb-3  font-bold'>{book.name}</h3>
+          <h5 className='mb-3  font-bold'>{book.name}</h5>
           <p>{book.about}</p>
-          <Link href={book.link} className='link'>{book.name}</Link>
+          <Link href={book.link} className='link'>Link to Book</Link>
         </div>
       ));
     }
@@ -68,9 +68,9 @@ export default function SkillDetails({id}) {
     if(details?.youtube) {
       ytChannels = details.youtube.map(yt => (
         <div key={yt.name} className='pl-10 my-5'>
-          <h3 className='mb-3  font-bold'>{yt.name}</h3>
+          <h5 className='mb-3  font-bold'>{yt.name}</h5>
           <p>{yt.about}</p>
-          <Link href={yt.link} className='link'>{yt.name}</Link>
+          <Link href={yt.link} className='link'>Link to Channel</Link>
         </div>
       ));
     }
@@ -78,9 +78,9 @@ export default function SkillDetails({id}) {
     if(details?.others) {
       additionalElements = details.others.map(other => (
         <div key={other.name} className='pl-10 my-5 '>
-          <h3 className='mb-3  font-bold'>{other.name}</h3>
+          <h5 className='mb-3  font-bold'>{other.name}</h5>
           <p>{other.about}</p>
-          <Link href={other.website} className='link'>{other.name}</Link>
+          <Link href={other.website} className='link'>View Resource</Link>
         </div>
       ));
     }
@@ -88,37 +88,36 @@ export default function SkillDetails({id}) {
   return (
       <div className='w-2/4 mx-auto mt-20 mb-20 py-10 px-5 bg-white rounded-lg shadow-lg'>
         <h3 className='text-slategray text-2xl text-center font-bold mb-5 '>{details?.name}</h3>
-        <p className='text-slategray'>{details?.description}</p>
       
         <section className='my-10 text-slategray'>
           <h3 className='text-slategray text-xl font-bold' >
             Resources that you need to kick start your journey into the world of {details?.name}
           </h3>
           <div>{resourceElements}</div>
-          <div className='my-10' >
-            <h2 className='text-slategray text-xl font-bold' >Professional Certificates</h2>
+          {details?.courses && <div className='my-10' >
+            <h5 className='text-slategray font-bold text-xl ' >Professional Certificates</h5>
             {courseElements}
-          </div>
-          <div className='my-10' >
-            <h2  className='text-slategray text-2xl font-bold mb-5 ' >Books</h2>
+          </div> }
+          {details?.books && <div className='my-10' >
+            <h5  className='text-slategray text-xl font-bold mb-5 ' >Books</h5>
             {books}
-          </div>
-          <div className='my-10' >
-            <h2  className='text-slategray text-2xl font-bold mb-5 ' >YouTube Channels</h2>
+          </div> }
+          {details?.youtube && <div className='my-10' >
+            <h5  className='text-slategray text-xl font-bold mb-5 ' >YouTube Channels</h5>
             {ytChannels}
-          </div>
+          </div> }
 
-          <div className='my-10' >
-            <h2  className='text-slategray text-2xl font-bold mb-5 ' >Additional Resources</h2>
+          {details?.others &&<div className='my-10' >
+            <h5  className='text-slategray text-xl font-bold mb-5 ' >Additional Resources</h5>
             {additionalElements}
-          </div>
+          </div> }
 
-          <div>
-            <h2 className='text-slategray text-2xl font-bold mb-5 '>Conclusion</h2>
+          {details?.conclusion && <div>
+            <h5 className='text-slategray text-xl font-bold mb-5 '>Conclusion</h5>
             <p className='text-slategray pl-10 mb-3'>{details?.conclusion}</p>
             <p className='text-slategray pl-10  mb-3'>{details?.conclusionmore}</p>
             <p className='text-slategray pl-10'>{details?.conclusionlast}</p>
-          </div>
+          </div> }
         </section>
       </div>
   )
