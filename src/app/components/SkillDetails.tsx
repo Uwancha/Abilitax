@@ -86,7 +86,7 @@ export default function SkillDetails({id}) {
     }
   
   return (
-      <div className='w-2/4 mx-auto mt-20 mb-20 py-10 px-5 bg-white rounded-lg shadow-lg'>
+      <div className='w-2/4 mx-auto py-20 px-5 bg-white '>
         <h3 className='text-slategray text-2xl text-center font-bold mb-5 '>{details?.name}</h3>
       
         <section className='my-10 text-slategray'>
