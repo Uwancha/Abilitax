@@ -46,32 +46,32 @@ export default function Home() {
                 <h3 className="text-slategray font-bold text-2xl text-center">Most Sought-After Talents</h3>
                 
                 <div className="talents">
-                    <section className="skill-card py-5"> 
+                    <section className="skill-card py-5 hover:shadow" > 
                         <h4 className="text-slategray font-bold text-xl pl-5">Software Engineering</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
                     </section>
-                    <section className="skill-card py-5" >
+                    <section className="skill-card py-5 hover:shadow" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Data Science</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
                     </section>
-                    <section className="skill-card py-5" >
+                    <section className="skill-card py-5 hover:shadow" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Cloud Computing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
                     </section>
-                    <section className="skill-card py-5" >
+                    <section className="skill-card py-5 hover:shadow" >
                         <h4 className="text-slategray font-bold text-xl pl-5">UI/UX Design</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
                     </section>
-                    <section className="skill-card py-5" >
+                    <section className="skill-card py-5 hover:shadow" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Video Editing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
                     </section>
-                    <section className="skill-card py-5" >
+                    <section className="skill-card py-5 hover:shadow" >
                         <h4 className="text-slategray font-bold text-xl pl-5">Digital Marketing</h4>
                         <p className="text-slategray pl-5">A brief introduction about the skill...</p>
                         <Link href="" className="link pl-5">Learn More</Link>
