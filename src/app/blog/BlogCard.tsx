@@ -13,7 +13,7 @@ const BlogCard = ({post}) => {
   return (
     <section className="blogCard" >
       <div className="blogCard-title  mb-4" >
-          <img src={''} className="authorImage" alt="Author's image" />
+          <img src={post.authorImage} className="authorImage" alt="Author's image" />
           <div className="author-date" >
               <p className='text-slategray font-bold mb-.5' >{post.author}</p>
               <p className='text-slategray' >{formatedDate}</p>
