@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'slategray': 'slategray',
+        'blackish':'rgb(7, 7, 55)'
       }
     },
   },
