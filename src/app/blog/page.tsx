@@ -1,106 +1,30 @@
 import React from "react";
-import Link from "next/link";
 
 // Components
 import Nav from "../components/Header";
-import { SideBar } from "../components/SideBar";
+import { SideBar } from "./SideBar";
+import BlogPosts from "./BlogPosts";
 
 
 const Blog: React.FC = () => {
+    const headerStyle = { 
+        backgroundColor: "#fff",
+        position: 'fixed',
+        width: '100%',
+        top: 0,
+        color: "cadetblue",
+    
+        padding: "1rem 15rem",
+        boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -15px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
+    }
+    
     return (
-        <div style={{backgroundColor: "whitesmoke"}}>
-            <Nav />
-            <div className="blog-home">
+        <div className="blog-home py-40" >
+            <Nav sty={headerStyle} />
+            <div className="blog">
                 <SideBar />
-                <article className="blog">
-                    <div className="posts">
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>What is a rabbit hole and how to escape it</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                                <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>What is a tutorial hell</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                             <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>Which skill Should I pick?</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                                <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>How to use AI as an aspiring Developer</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                                <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>Will AI replace programmers?</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                                <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                        <section className="blogCard" >
-                            <div className="blogCard-title" >
-                                <img src={''} className="authorImage" alt="Author's image" />
-                                <div className="author-date" >
-                                    <p>Sitota Alemu</p>
-                                    <p>Nov, 2023</p>
-                                </div>
-                            </div>
-                            <h2>5 best Project ideas for front-end developer</h2>
-                            <div className="cta" >
-                                <p>5 min read</p>
-                                <Link href="">Continue Reading</Link>
-                            </div>
-                        </section>
-                    </div>
-                </article>
-            </div>
+                <BlogPosts />
+            </div>               
         </div>
     )
 }
