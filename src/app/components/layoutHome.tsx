@@ -27,7 +27,7 @@ export default function Layout({ children, metaTitle }) {
     position: 'fixed',
     width: '100%',
     top: 0,
-    color: scrollPosition > 30 ? "slategray": "#fff",
+    color: scrollPosition > 30 ? "cadetblue": "#fff",
 
     padding: scrollPosition > 30 ? "2rem 15rem" : "5rem 15rem",
     boxShadow: scrollPosition > 30 ? 'rgba(50, 50, 93, 0.1) 0px 13px 27px -15px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px' : 'none'
