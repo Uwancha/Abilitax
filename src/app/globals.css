@@ -197,3 +197,65 @@ body {
   background-color: cadetblue;
   color: #ffffff87;
 }
+
+.blog-home {
+  margin: 0;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4rem;
+}
+
+.posts {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.1) 1px 13px 7px -18px,
+  rgba(0, 0, 0, 0.25) 1px 8px 16px -8px;
+  background-color: #fff;
+  width: 80%;
+}
+
+.blogCard-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.blogCard h2, .blogCard > p {
+  padding-left: 3rem;
+}
+
+.authorImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  padding-left: 3rem;
+  color: slategray;
+}
+
+.cta a, .filters{
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.cta a, .filters:hover {
+  color: cadetblue;
+}
