@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const SideBar: React.FC = () => {
     return (
-        <article className="text-slategray flex flex-col gap-4 ml-20 ">
+        <article className="text-blacklish flex flex-col gap-4 ml-20 ">
             <Link href={''} className="filters" >
                 Front-End Development
             </Link>
