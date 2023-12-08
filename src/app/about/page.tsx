@@ -33,28 +33,28 @@ const About: React.FC = () => {
             <div className="about-home w-full">
                 <section className="about w-3/5 mx-auto flex flex-col gap-16 mt-16 pt-10 pb-20 px-4" >
                     <h1 className="text-blackish text-center text-4xl font-bold mt-8" >About AbiliTax</h1>
-                    <p >
+                    <p className="text-xl text-blackish font-light" >
                         AbiliTax is an online skills development platform addressing the growing
                         demand for training in web development, design, marketing and other careers
                         in our country.
                     </p>
-                    <p>
+                    <p className="text-xl text-blackish font-light">
                         With Internet resources scattered and often overwhelming for beginners,
                         our goal is to simplify the skills learning journey. AbiliTax curate only the
                         highest quality tutorials, courses and guides from across the web and
                         organize them taxonomically based on topic.
                     </p>
-                    <p >
+                    <p className="text-xl text-blackish font-light" >
                         In addition to structured content library, AbiliTax produces original learning
                         resources through our blog and YouTube channel. Here you'll find helpful tips,
                         guides, and video explanations to supplement your skills growth.
                     </p>
-                    <p >
+                    <p className="text-xl text-blackish font-light" >
                         By bringing together resources from across the Internet and creating new
                         content tailored primarily for our local market, AbiliTax aims to become
                         the premier hub for anyone seeking accessible skills training in our country.
                     </p>
-                    <p >
+                    <p className="text-xl text-blackish font-light" >
                         Start expanding your abilities today by exploring our content or subscribing
                         to our YouTube channel for updates. We look forward to supporting you on
                         your learning journey!
@@ -72,7 +72,7 @@ const About: React.FC = () => {
                     />
                 </div> 
                 <div className="flex flex-col text-slategray self-start py-20"> 
-                    <h3 className="text-2xl font-bold mb-10">Wanna to contact us</h3>
+                    <h3 className="text-2xl font-bold mb-10">Want to contact us</h3>
                     <p>
                         Have additional questions? Reach out directly
                     </p>
