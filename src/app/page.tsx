@@ -17,8 +17,8 @@ export default function Home() {
     <Layout metaTitle={'dfkndkfjkdfdf'} >
       <div className="home">
             <article className="hero">
-                <h1 className="text-2xl font-bold mt-60 pl-60">
-                 Collections of curated resources for your first or next carrier!
+                <h1 className="text-3xl font-extrabold mt-60 pl-60">
+                 Collections of curated resources!
                 </h1>
 
                 <article className="article-about text-xl mt-10 pl-60">
