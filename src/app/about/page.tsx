@@ -71,7 +71,7 @@ const About: React.FC = () => {
                         className="rounded-md shadow-md hover:shadow-lg"
                     />
                 </div> 
-                <div className="flex flex-col text-slategray self-start py-20"> 
+                <div id="contact" className="flex flex-col text-slategray self-start py-20"> 
                     <h3 className="text-2xl font-bold mb-10">Want to contact us</h3>
                     <p>
                         Have additional questions? Reach out directly
