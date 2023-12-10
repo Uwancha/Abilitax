@@ -10,7 +10,7 @@ export default function SkillDetailsPage({params}) {
   return (
     <main>
       
-      <div className='skill-details pt-10 '>
+      <div className='skill-details pt-20 '>
         <Layout metaTitle={'gjdgjfgkjfgkj'}>
           <SkillDetails id={id} />
         </Layout>
