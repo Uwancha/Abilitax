@@ -11,7 +11,7 @@ const Nav: React.FC = ({sty}) => {
     return (
         <div className="flex justify-between py-10" style={sty}>
             <Link href='/' className="flex items-center hover:opacity-50">
-                <Image src={'/logo-.png'} alt='logo' width={100} height={150} />
+                <Image src={'/logo-.png'} alt='logo' width={100} height={150} priority />
                 <h3 className="text-silver text-3xl font-bold" style={{marginLeft:'-20px'}}>Abilitax</h3>
             </Link>
             <nav className="flex">

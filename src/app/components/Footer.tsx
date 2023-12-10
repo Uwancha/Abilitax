@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <footer className="footer text-blackish flex justify-center gap-20 py-10">
                 <div >
                     <Link href='/' className="flex items-center justify-start mb-6 ml-auto hover:opacity-50" >
-                        <Image src={'/logo-.png'} alt="logo"  width={100} height={150} />
+                        <Image src={'/logo-.png'} alt="logo"  width={100} height={150} priority />
                         <h2 className="abilitax mb-2 text-silver text-3xl font-bold" style={{marginLeft:'-20px'}}>Abilitax</h2>
                     </Link>
                     <h5 className="font-light">AbiliTax curate only the highest quality curriculums, tutorials, courses <br /> 
