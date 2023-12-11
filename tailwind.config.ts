@@ -11,7 +11,10 @@ const config: Config = {
       colors: {
         'slategray': 'slategray',
         'blackish':'rgb(7, 7, 55)',
-        'whitesmoke':'whitesmoke'
+        'whitesmoke':'whitesmoke',
+        'goldenrod': 'goldenrod',
+        'tomato':'tomato',
+        'silver': 'silver'
       }
     },
   },
