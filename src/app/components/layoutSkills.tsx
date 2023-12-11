@@ -8,7 +8,7 @@ export default function Layout({ children, metaTitle }) {
 
   const headerStyle = { 
     backgroundColor: "#fff",
-    position: 'fixed',
+    position: 'absolute',
     width: '100%',
     top: 0,
     color: "cadetblue",
