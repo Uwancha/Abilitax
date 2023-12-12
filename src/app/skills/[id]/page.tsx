@@ -5,7 +5,7 @@ import Footer from "@/app/components/Footer";
 import Layout from "@/app/components/layoutSkillDetails";
 import Loading from "../loading";
 
-export default function SkillDetailsPage(params: { id: any; }) {
+export default function SkillDetailsPage(params: { id: string; }) {
   const id = params.id;
 
   return (
