@@ -10,7 +10,8 @@ const LatestBlogCard = ({post}) => {
     rounded-lg bg-white text-blackish
     shadow-md" >
 
-      <h2 className='text-blacklish text-xl font-bold mb-2'>{post.title}</h2>
+      <h2 className='text-blacklish font-bold mb-2
+      sm:text-xl'>{post.title}</h2>
       <p className='text-blacklish font-light my-6'>{post.summary.split(0, 50)}</p>
       <div className="cta mt-4">
         <p className='text-blacklish'>{post.readmin}</p>

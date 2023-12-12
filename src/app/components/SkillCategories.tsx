@@ -49,7 +49,7 @@ const SkillsCategories: React.FC = () => {
   return (
     <div className='mb-10'>
       <div>{data?.map(d => (
-          <article className='bg-white flex flex-col gap-1 mb-5 mx-auto w-1/2 ' key={d.name}>
+          <article className='bg-white flex flex-col gap-1 mb-5 mx-auto w-3/4 sm:w-1/2 ' key={d.name}>
             <SkillCard skill={d} />
           </article>
       ) ) } 

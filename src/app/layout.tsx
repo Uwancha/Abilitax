@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 import Head from 'next/head'
+import { Suspense } from 'react'
+import NotFound from './404'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,7 +38,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <Suspense fallback={<NotFound />}>
+      <body className={inter.className}>
+        {children}
+      </body>
+      </Suspense>
     </html>
   )
 }

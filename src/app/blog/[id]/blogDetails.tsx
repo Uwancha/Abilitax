@@ -30,7 +30,7 @@ async function getBlogDetails(id) {
 
 const RenderIntroduction = ({ intro }) => {
   return (
-    <div key={intro.id} className='my-5 pl-10'>
+    <div key={intro.id} className='my-5 pl-5 sm:pl-10'>
       <p className='font-light'>{intro}</p>
     </div>
   );
@@ -38,7 +38,7 @@ const RenderIntroduction = ({ intro }) => {
 
 const RenderContent = ({ content }) => {
   return (
-    <div key={content.id} className='pl-10 my-5'>
+    <div key={content.id} className='pl-5 sm:pl-10 my-5'>
       <h5 className='mb-3 font-bold'>{content.subtitle}</h5>
       <p className='font-light'>{content.body}</p>
     </div>
@@ -55,7 +55,7 @@ const RenderTip = ({ tip }) => {
 
 const RenderConclusion = ({ conclusion }) => {
   return (
-    <div key={''} className='pl-10 my-5'>
+    <div key={''} className='pl-5 sm:pl-10 my-5'>
       <p className='font-light'>{conclusion}</p>
     </div>
   );
@@ -115,28 +115,28 @@ export default function Details({id}) {
       <img
         src={details?.image} 
         alt={details?.title} 
-        className='w-2/4 mt-10 mx-auto '
+        className='w-full sm:w-2/4 mt-10 mx-auto '
       />
-      <div className='w-2/4 mx-auto py-10 px-5 bg-white rounded-lg text-xl '>
-      <div className="blogCard-title mb-8" >
+      <div className='sm:w-2/4 mx-auto py-20 sm:px-5 bg-white rounded-lg text-xl '>
+      <div className="blogCard-title mb-8 pl-5" >
           <img src={details?.authorImage} className="authorImage" alt="Author's image" />
           <div className="author-date" >
-              <p className='text-blacklish font-bold mb-.5' >{details?.author}</p>
+              <p className='text-blacklish sm:font-bold mb-.5' >{details?.author}</p>
               <p className='text-blacklish' >{formatedDate}</p>
           </div>
       </div>
-        <h3 className='text-blacklish text-2xl text-center font-bold mb-5 '>{details?.title}</h3>
+        <h3 className='text-blacklish sm:text-2xl text-center font-bold mb-5 '>{details?.title}</h3>
       
         <section className='my-10 text-blacklish'>
           <div>
-            <h5 className='mb-3 pl-10 font-bold'>Introduction</h5>
+            <h5 className='mb-3 pl-5 sm:pl-10 font-bold'>Introduction</h5>
             {introductionElements}
           </div>
           {details?.content && <div className='my-10' >
             {blogBody}
           </div> }
           {details?.conclusion && <div className='my-10' >
-            <h5  className='text-blacklish text-xl font-bold pl-10 mb-5 ' >Conclusion</h5>
+            <h5  className='text-blacklish text-xl font-bold pl-5 sm:pl-10 mb-5 ' >Conclusion</h5>
             {conclusionElement}
           </div> }
           {details?.tip && <div className='mx-10 bg-whitesmoke text-slategray rounded-lg my-10' >

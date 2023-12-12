@@ -14,7 +14,6 @@ export default function Layout({ children, metaTitle }) {
     width: '100%',
     top: 0,
     color: "#fff",
-    padding: "5rem 15rem",
   }
 
   return (

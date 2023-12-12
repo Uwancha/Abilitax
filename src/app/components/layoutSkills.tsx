@@ -11,11 +11,9 @@ export default function Layout({ children, metaTitle }) {
     position: 'absolute',
     width: '100%',
     top: 0,
-    color: "cadetblue",
+    color: "slategray",
 
-    padding: "1rem 15rem",
     boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -15px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
-
   }
 
   return (

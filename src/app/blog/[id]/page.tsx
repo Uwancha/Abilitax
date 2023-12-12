@@ -10,9 +10,7 @@ export default function BlogDetail({params}) {
     position: 'fixed',
     width: '100%',
     top: 0,
-    color: "cadetblue",
-
-    padding: "1rem 15rem",
+    color: "slategray",
     boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
 
   }

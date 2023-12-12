@@ -9,16 +9,16 @@ import Image from "next/image";
 const Nav: React.FC = ({sty}) => {
     
     return (
-        <div className="flex justify-between py-10" style={sty}>
+        <div className="flex justify-between items-center py-5 sm:px-20" style={sty}>
             <Link href='/' className="flex items-center hover:opacity-50">
-                <Image src={'/logo-.png'} alt='logo' width={100} height={150} priority />
-                <h3 className="text-silver text-3xl font-bold" style={{marginLeft:'-20px'}}>Abilitax</h3>
+                <Image src={'/logo-.png'} alt='logo' className="w-[80px] sm:w-[150px]" width={100} height={150} priority />
+                <h3 className="text-silver  font-bold sm:text-3xl" style={{marginLeft:'-15px'}}>Abilitax</h3>
             </Link>
             <nav className="flex">
-                <Link href="/" className="text font-bold mr-3 hover:opacity-50">Home</Link>
-                <Link href="/skills" className="text font-bold mr-3 hover:opacity-50">Skills</Link>
-                <Link href="/blog" className="text font-bold mr-3 hover:opacity-50">Blog</Link> 
-                <Link href="/about" className="text font-bold mr-3 hover:opacity-50">About</Link>  
+                <Link href="/" className="text  mr-3 hover:opacity-50 sm:font-bold">Home</Link>
+                <Link href="/skills" className="text mr-3 hover:opacity-50 sm:font-bold">Skills</Link>
+                <Link href="/blog" className="text mr-3 hover:opacity-50 sm:font-bold">Blog</Link> 
+                <Link href="/about" className="text mr-3 hover:opacity-50 sm:font-bold">About</Link>  
             </nav>
         </div>
     )

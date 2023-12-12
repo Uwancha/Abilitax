@@ -49,7 +49,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
 }
 
 
@@ -125,12 +124,6 @@ body {
   
 }
 
-.blog {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 4rem;
-}
-
 .posts {
   display: grid;
   row-gap: 2rem;
@@ -139,22 +132,16 @@ body {
 .blogCard {
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.1) 1px 13px 7px -18px,
   rgba(0, 0, 0, 0.25) 1px 8px 16px -8px;
   background-color: #fff;
-  width: 80%;
 }
 
 .blogCard-title {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-
-.blogCard h2, .blogCard > p {
-  padding-left: 3rem;
 }
 
 .authorImage {
@@ -193,4 +180,10 @@ body {
   font-size: 36px;
   font-weight: 500;
   margin-bottom: -1rem;
+}
+
+@media (max-width: 768px) {
+  .talents {
+    grid-template-columns: 1fr;
+  }
 }

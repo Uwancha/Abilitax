@@ -47,7 +47,7 @@ const BlogPosts: React.FC = () => {
 
   return (
     <div className='mb-10'>
-      <div className="posts">{posts?.map(post => (
+      <div className="posts w-full sm:w-2/4 sm:mx-auto">{posts?.map(post => (
             <BlogCard post = {post} key={post.id} />
       ) ) } 
       </div>

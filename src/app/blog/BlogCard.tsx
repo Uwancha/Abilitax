@@ -11,7 +11,7 @@ const BlogCard = ({post}) => {
   const formatedDate = format(post.createdat.toDate(), dateFormat)
 
   return (
-    <section className="blogCard" >
+    <section className="blogCard p-4 mb-5" >
       <div className="blogCard-title  mb-4" >
           <img src={post.authorImage} className="authorImage" alt="Author's image" />
           <div className="author-date" >
@@ -19,8 +19,8 @@ const BlogCard = ({post}) => {
               <p className='text-blacklish' >{formatedDate}</p>
           </div>
       </div>
-      <h2 className='text-blacklish text-xl font-bold mb-2'>{post.title}</h2>
-      <p className='text-blacklish'>{post.summary}</p>
+      <h2 className='text-blacklish pl-3 sm:text-xl sm:pl-3 font-bold mb-2'>{post.title}</h2>
+      <p className='text-blacklish p-3'>{post.summary}</p>
       <div className="cta mt-4">
         <p className='text-blacklish'>{post.readmin}</p>
         <Link href={`blog/${post.id}`} 

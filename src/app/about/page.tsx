@@ -13,12 +13,10 @@ import creatorsPhoto from './1666710204004.jpeg'
 const About: React.FC = () => {
     const headerStyle = { 
         backgroundColor: "#fff",
-        position: 'fixed',
+        position: 'absolute',
         width: '100%',
         top: 0,
-        color: "cadetblue",
-    
-        padding: "1rem 15rem",
+        color: "slategray",
         boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
     
       }
@@ -31,8 +29,8 @@ const About: React.FC = () => {
         >
             <Nav sty={headerStyle} />
             <div className="about-home w-full">
-                <section className="about w-3/5 mx-auto flex flex-col gap-16 mt-16 pt-10 pb-20 px-4" >
-                    <h1 className="text-blackish text-center text-4xl font-bold mt-8" >About AbiliTax</h1>
+                <section className="about sm:w-3/5 mx-auto flex flex-col gap-16 mt-16 pt-10 pb-20 px-4" >
+                    <h1 className="text-blackish text-center text-4xl font-bold mt-20" >About AbiliTax</h1>
                     <p className="text-xl text-blackish font-light" >
                         AbiliTax is an online skills development platform addressing the growing
                         demand for training in web development, design, marketing and other careers
@@ -63,7 +61,9 @@ const About: React.FC = () => {
 
             </div>
 
-            <div className="contact border border-t flex items-center justify-center gap-40 py-40">
+            <div className="contact border border-t flex flex-col-reverse px-5 sm:px-0 sm:items-center sm:justify-center
+             sm:gap-40 sm:flex-row py-40"
+            >
                 <div>
                     <Image
                         src={creatorsPhoto} alt={"creator's photo"} 
@@ -72,7 +72,7 @@ const About: React.FC = () => {
                     />
                 </div> 
                 <div id="contact" className="flex flex-col text-slategray self-start py-20"> 
-                    <h3 className="text-2xl font-bold mb-10">Want to contact us</h3>
+                    <h3 className="text-2xl font-bold mb-10">Want to contact us?</h3>
                     <p>
                         Have additional questions? Reach out directly
                     </p>

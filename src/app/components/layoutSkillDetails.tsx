@@ -1,10 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Head from "next/head";
 
 import Nav from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ children, metaTitle }) {
+export default function Layout({ children, metaTitle }: {
+  children: ReactNode, 
+  metaTitle: ReactNode
+}) {
 
   const headerStyle = { 
     backgroundColor: "#fff",
@@ -13,9 +16,7 @@ export default function Layout({ children, metaTitle }) {
     top: 0,
     color: "slategray",
 
-    padding: "1rem 15rem",
     boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
-
   }
 
   return (
@@ -29,14 +30,14 @@ export default function Layout({ children, metaTitle }) {
         />
         <meta
           property="og:url"
-          content={`https://merekverse.com`}
+          content={`https://abilitax.com`}
         />
         <link
           rel="canonical"
-          href={`https://merekverse.com/skills`}
+          href={`https://abilitax.com/skills`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Merek Verse" />
+        <meta property="og:site_name" content="Abilitax" />
         <meta
           property="og:description"
           content="Collections of best curated resources to learn in demand skills"

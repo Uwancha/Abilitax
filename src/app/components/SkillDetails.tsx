@@ -26,9 +26,9 @@ async function getSkillDetails(id) {
 
 const RenderResource = ({ resource }) => {
   return (
-    <div key={resource.name} className='my-5 pl-10'>
+    <div key={resource.name} className='my-5 pl-5 sm:pl-10'>
       <h5 className='text-xl font-light mb-5'>{resource.name}</h5>
-      <p className='pl-10 mb-5'>{resource.about}</p>
+      <p className=' mb-5'>{resource.about}</p>
       <Link href={resource.website || resource.link} className='link'>
         View Resource
       </Link>
@@ -39,7 +39,7 @@ const RenderResource = ({ resource }) => {
 const SkillSection = ({ title, elements }) => {
   return (
     <div className='my-10'>
-      <h5 className='text-blackish font-bold pl-10 text-xl'>{title}</h5>
+      <h5 className='text-blackish font-bold pl-5 text-xl sm:pl-10'>{title}</h5>
       {elements}
     </div>
   );
@@ -85,8 +85,8 @@ export default function SkillDetails({id}) {
     )); 
   
   return (
-      <div className='w-2/4 mx-auto py-10 px-5 mt-10 mb-10 bg-white rounded-lg '>
-        <h2 className='text-blackish text-2xl text-center font-bold mb-5 '>{name}</h2>
+      <div className='w-full mx-auto py-10 px-5 mt-10 mb-10 bg-white rounded-lg sm:w-2/4 '>
+        <h2 className='text-blackish text-xl text-center font-bold mb-5 sm:text-2xl '>{name}</h2>
       
         <section className='my-10 text-blackish'>
           <h3 className='text-blackish text-xl font-bold mb-10' >
@@ -101,10 +101,10 @@ export default function SkillDetails({id}) {
 
           {details?.conclusion && (
             <div>
-              <h5 className='text-blackish text-xl font-bold pl-10 mb-5 '>Conclusion</h5>
-              <p className='text-blackish font-light pl-10 mb-3'>{details?.conclusion}</p>
-              <p className='text-blackish font-light pl-10  mb-3'>{details?.conclusionmore}</p>
-              <p className='text-blackish font-light pl-10'>{details?.conclusionlast}</p>
+              <h5 className='text-blackish text-xl font-bold pl-5 mb-5 sm:pl-10 '>Conclusion</h5>
+              <p className='text-blackish font-light pl-5 mb-3 sm:pl-10'>{details?.conclusion}</p>
+              <p className='text-blackish font-light pl-5 mb-3 sm:pl-10'>{details?.conclusionmore}</p>
+              <p className='text-blackish font-light pl-5 sm:pl-10'>{details?.conclusionlast}</p>
             </div> 
           )}
         </section>

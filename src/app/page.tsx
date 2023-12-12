@@ -14,11 +14,19 @@ export default function Home() {
     <Layout metaTitle={'Abilitax'} >
       <div className="home">
             <header className="hero">
-                <h1 className="text-3xl font-extrabold mt-60 pl-60">
+                <h1 className="text-xl font-extrabold mt-60 pl-4
+                sm:pl-60
+                sm:text-3xl
+                "
+                >
                     Collections of curated resources!
                 </h1>
 
-                <article className="article-about text-xl mt-10 pl-60">
+                <article className="article-about text-xl mt-10 pl-4 pr-6
+                    sm:pl-60
+                    sm-w-1/2
+                "
+                >
                     <p>
                         Often learning new skills is frustrating due to picking the right resources.
                     </p>
@@ -27,11 +35,13 @@ export default function Home() {
                     </p>
                     <Link
                     href="/skills"
-                    className="w-2/4 text-center text-white mt-20 mb-10 py-4
+                    className="w-3/4 text-center text-white mt-20 mb-10 py-4
                     text-xl  border border-green-626 rounded-full shadow-md 
                     hover:bg-white hover:text-slategray 
                     hover:border hover:border-blackish
-                    transition duration-1000 ease-in-out"
+                    transition duration-1000 ease-in-out
+                    
+                    sm:w-2/4 sm:mr-auto"
                 >
                     Browse Resources
                 </Link>
@@ -86,11 +96,12 @@ export default function Home() {
 
                 <Link
                     href="/skills"
-                    className="w-1/4 mx-auto text-center text-white mt-10 mb-10 py-4
+                    className="w-2/4 mx-auto text-center text-white mt-10 mb-10 py-4
                     text-xl bg-blackish border border-green-626 rounded-full shadow-md 
                     hover:bg-white hover:text-slategray 
                     hover:border hover:border-blackish
-                    transition duration-500 ease-in-out"
+                    transition duration-500 ease-in-out
+                    sm:w-1/4"
                 >
                     Explore More
                 </Link>
