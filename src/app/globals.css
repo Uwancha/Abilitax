@@ -182,6 +182,42 @@ body {
   margin-bottom: -1rem;
 }
 
+.loading {
+  margin-top: 18rem;
+  margin-bottom: 18rem;
+  margin-left: 45%;
+  display: flex;
+  gap: 1rem;
+  height: 50vh;
+}
+
+.circular-btn {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.584);
+  border: none;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+
+  50% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+
 @media (max-width: 768px) {
   .talents {
     grid-template-columns: 1fr;
