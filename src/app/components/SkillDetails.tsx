@@ -68,20 +68,20 @@ export default function SkillDetails({id}) {
     }
     
     const resourceElements = details?.resources.map(resource => (
-      <RenderResource resource={resource} /> 
+      <RenderResource key={resource} resource={resource} /> 
     ) );
     const courseElements = details?.courses.map(course => ( 
-      <RenderResource resource={course} />
+      <RenderResource key={course} resource={course} />
     ));
     const booksElements = details?.books.map(book => ( 
-      <RenderResource resource={book} />
+      <RenderResource key={book} resource={book} />
     ));
     const ytChannels = details?.youtube.map(yt => ( 
-      <RenderResource resource={yt} />
+      <RenderResource key={yt} resource={yt} />
     ));
     
     const additionalElements = details?.others.map(other => (
-      <RenderResource resource={other} />
+      <RenderResource key={other} resource={other} />
     )); 
   
   return (
