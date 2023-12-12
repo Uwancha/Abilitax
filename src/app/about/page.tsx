@@ -23,10 +23,7 @@ const About: React.FC = () => {
 
 
     return (
-        <Layout 
-            title={'About Us'} 
-            description={'Learn how AbiliTax helps users develop skills through curated resources and courses.'}
-        >
+        <Layout >
             <Nav sty={headerStyle} />
             <div className='about-home w-full'>
                 <section className='about sm:w-3/5 mx-auto flex flex-col gap-16 mt-16 pt-10 pb-20 px-4' >
