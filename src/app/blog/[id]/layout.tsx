@@ -2,13 +2,7 @@ import React, { Suspense } from "react";
 import Head from "next/head";
 import Loading from "@/app/skills/loading";
 
-interface LayoutProps {
-    title: string;
-    description: string;
-    children: React.ReactNode
-}
-
-export default function Layout({ title, description, children }: LayoutProps) {
+export default function Layout({ title, description, children }) {
 
     return (
         <>
