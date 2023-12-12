@@ -31,7 +31,7 @@ export default function Home() {
                         Often learning new skills is frustrating due to picking the right resources.
                     </p>
                     <p className='mt-4'>
-                        We've curated the best resources to kickstart your learning journey efficiently.
+                        We have curated the best resources to kickstart your learning journey efficiently.
                     </p>
                     <Link
                     href='/skills'

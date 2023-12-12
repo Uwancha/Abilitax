@@ -44,7 +44,7 @@ const About: React.FC = () => {
                     </p>
                     <p className='text-xl text-blackish font-light' >
                         In addition to structured content library, AbiliTax produces original learning
-                        resources through our blog and YouTube channel. Here you'll find helpful tips,
+                        resources through our blog and YouTube channel. Here you ll find helpful tips,
                         guides, and video explanations to supplement your skills growth.
                     </p>
                     <p className='text-xl text-blackish font-light' >
