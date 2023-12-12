@@ -6,7 +6,7 @@ import Head from "next/head";
 import Nav from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ children, metaTitle }) {
+export default function Layout({children}) {
   const headerStyle = {
     backgroundColor: 'transparent', 
     transition: 'background-color 1.5s ease',
@@ -20,7 +20,7 @@ export default function Layout({ children, metaTitle }) {
     <>
       <Head>
         <meta name="robots" content="follow, index" />
-        <title>{metaTitle}</title>
+        <title>Abilitax</title>
         <meta
           content="Collections of best curated resources to learn in demand skills in 2024"
           name="description"
@@ -39,7 +39,7 @@ export default function Layout({ children, metaTitle }) {
           property="og:description"
           content="Collections of best curated resources to learn in demand skills"
         />
-        <meta property="og:title" content={metaTitle} />
+        <meta property="og:title" content='Abilitax' />
       </Head>
         <Nav sty={headerStyle}/>
         {children}

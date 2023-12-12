@@ -110,8 +110,6 @@ export default function Details({id}) {
   
   return (
     <Layout
-        title={'AbiliTax-Guide to become Full-Stack developer'}
-        description={details?.summary}
     >
       <Suspense fallback={<Loading />}>
       <img
