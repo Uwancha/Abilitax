@@ -48,7 +48,7 @@ const RenderContent = ({ content }) => {
 
 const RenderTip = ({ tip }) => {
   return (
-    <div key={''} className='p-4 my-5'>
+    <div key={tip} className='p-4 my-5'>
       <p>{tip}</p>
     </div>
   );
@@ -56,7 +56,7 @@ const RenderTip = ({ tip }) => {
 
 const RenderConclusion = ({ conclusion }) => {
   return (
-    <div key={''} className='pl-5 sm:pl-10 my-5'>
+    <div key={conclusion} className='pl-5 sm:pl-10 my-5'>
       <p className='font-light'>{conclusion}</p>
     </div>
   );
@@ -90,13 +90,13 @@ export default function Details({id}) {
     }
 
     const introductionElements = details?.introduction.map(intro => (
-        <RenderIntroduction intro={intro} />
+        <RenderIntroduction key={intro} intro={intro} />
       ));
     
 
     
     const blogBody = details?.content.map(c => (
-        <RenderContent content={c} />
+        <RenderContent key={c} content={c} />
       ));
     
     const  tipElement =  (
