@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Details from './blogDetails';
 import Nav from '@/app/components/Header';
+import Loading from '@/app/skills/loading';
 
 export default function BlogDetail({params}) {
   const id = params.id;
@@ -18,7 +19,9 @@ export default function BlogDetail({params}) {
   return (
     <div className='bg-whitesmoke py-10'>
       <Nav sty={headerStyle} />
+      <Suspense fallback={<Loading />} >
       <Details id={id} />
+      </Suspense>
     </div>
   )
 }

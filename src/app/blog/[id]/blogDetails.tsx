@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { db } from '@/app/firebaseConfig'
 import {doc, getDoc } from 'firebase/firestore'
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import Layout from './layout';
 
 // Import date-fns to format date
 import { format } from 'date-fns';
+import Loading from '@/app/skills/loading';
 
 async function getBlogDetails(id) {
   const docref = doc(db, 'blogs', id);
@@ -112,6 +113,7 @@ export default function Details({id}) {
         title={'AbiliTax-Guide to become Full-Stack developer'}
         description={details?.summary}
     >
+      <Suspense fallback={<Loading />}>
       <img
         src={details?.image} 
         alt={details?.title} 
@@ -145,6 +147,7 @@ export default function Details({id}) {
 
         </section>
       </div>
+      </Suspense>
     </Layout>
   )
 }

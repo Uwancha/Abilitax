@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Head from "next/head";
+import Loading from "@/app/skills/loading";
 
 interface LayoutProps {
     title: string;
@@ -35,7 +36,9 @@ export default function Layout({ title, description, children }: LayoutProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
             </Head>
+            <Suspense fallback={<Loading />}>
             {children}
+            </Suspense>
         </>
     )
 }
