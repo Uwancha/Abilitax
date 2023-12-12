@@ -3,7 +3,7 @@ import Details from './blogDetails';
 import Nav from '@/app/components/Header';
 import Loading from '@/app/skills/loading';
 
-export default function BlogDetail({params}) {
+function BlogDetail(params: {id:string}) {
   const id = params.id;
   
   const headerStyle = { 
@@ -25,3 +25,6 @@ export default function BlogDetail({params}) {
     </div>
   )
 }
+
+
+export { BlogDetail }
