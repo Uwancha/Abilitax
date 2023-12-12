@@ -47,8 +47,8 @@ const LatestBlogPosts: React.FC = () => {
 
   return (
     <div className='w-full mb-10'>
-      <div className="w-full px-4 flex flex-col gap-10 mx-auto
-       sm:w-2/4 sm:px-0">
+      <div className='w-full px-4 flex flex-col gap-10 mx-auto
+       sm:w-2/4 sm:px-0'>
         {posts?.map(post => (
             <LatestBlogCard post = {post} key={post.id} />
       ) ) } 
