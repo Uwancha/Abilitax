@@ -1,12 +1,7 @@
 import Head from "next/head";
 
-interface LayoutProps {
-    title: string;
-    description: string;
-    children: React.ReactNode
-}
 
-export default function Layout({ title, description, children }: LayoutProps) {
+export default function Layout({ title, description, children }) {
 
     return (
         <>
