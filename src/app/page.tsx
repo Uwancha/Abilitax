@@ -11,7 +11,7 @@ import LatestBlogPosts from './components/latestBlogPosts';
 export default function Home() {
   return (
     <main>
-    <Layout metaTitle={'Abilitax'} >
+    <Layout >
       <div className='home'>
             <header className='hero'>
                 <h1 className='text-xl font-extrabold mt-60 pl-4

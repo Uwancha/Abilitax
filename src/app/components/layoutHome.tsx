@@ -1,12 +1,12 @@
 'use client'
 
-import React from "react";
+import React, { ReactNode } from "react";
 import Head from "next/head";
 
 import Nav from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({children}) {
+export default function Layout({children}:{children:ReactNode}) {
   const headerStyle = {
     backgroundColor: 'transparent', 
     transition: 'background-color 1.5s ease',

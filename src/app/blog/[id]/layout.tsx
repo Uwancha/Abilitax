@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
+import React, { ReactNode, Suspense } from "react";
 import Head from "next/head";
 import Loading from "@/app/skills/loading";
 
-export default function Layout({children }) {
+export default function Layout({children }: {children: ReactNode}) {
 
     return (
         <>

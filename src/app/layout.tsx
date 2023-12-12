@@ -21,15 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>Abilitax</title>
+        <meta name="description" content='A collections of curated resources to learn in demand skills' />
 
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
+        <meta property="og:title" content='Abilitax'/>
+        <meta property="og:description" content='A collections of curated resources to learn in demand skills' />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:title" content='Abilitax' />
+        <meta name="twitter:description" content='A collections of curated resources to learn in demand skills' />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
