@@ -62,7 +62,7 @@ export default async function SkillDetailsPage({params} : SkillDetailsPageProps)
   return (
     <>
       <Nav />
-      <div className='skill-details py-10'>
+      <div className='skill-details sm:py-10'>
         <Layout metaTitle={'Skill details | Abilitax'}>
           <Suspense fallback={<Loading />} >
           {skill !== null ? (

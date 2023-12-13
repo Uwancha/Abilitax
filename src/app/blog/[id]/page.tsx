@@ -62,7 +62,7 @@ export default async function BlogDetail({params}: BlogDetailsPageProps) {
   return (
     <>
     <Nav/>
-      <div className='bg-whitesmoke py-10'>
+      <div className='bg-whitesmoke'>
         <Suspense fallback={<Loading />} >
         {post !== null ? (
               <Details post={post}  />

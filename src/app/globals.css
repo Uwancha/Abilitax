@@ -151,14 +151,14 @@ body {
 .cta {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
   padding-left: 3rem;
   color: slategray;
 }
 
 .cta a, .filters{
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .cta a, .filters:hover {
