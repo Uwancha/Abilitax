@@ -11,20 +11,10 @@ import Footer from '../components/Footer';
 import creatorsPhoto from './1666710204004.jpeg'
 
 const About: React.FC = () => {
-    const headerStyle = { 
-        backgroundColor: '#fff',
-        position: 'absolute',
-        width: '100%',
-        top: 0,
-        color: 'slategray',
-        boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
     
-      }
-
-
     return (
         <Layout >
-            <Nav sty={headerStyle} />
+            <Nav />
             <div className='about-home w-full'>
                 <section className='about sm:w-3/5 mx-auto flex flex-col gap-16 mt-16 pt-10 pb-20 px-4' >
                     <h1 className='text-blackish text-center text-4xl font-bold mt-20' >About AbiliTax</h1>
