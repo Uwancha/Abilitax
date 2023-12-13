@@ -1,7 +1,32 @@
 import React from 'react'
 import Link from 'next/link';
 
-const RenderResource = ({ resource }) => {
+// Define interfaces
+
+interface Resource {
+  name: string;
+  about: string;
+  website: string;
+  link: string;
+}
+
+interface Skill {
+  name: string;
+  resources: Resource[];
+  courses: Resource[];
+  books: Resource[];
+  youtube: Resource[];
+  others: Resource[];
+  conclusion: string;
+  conclusionmore: string;
+  conclusionlast: string;
+}
+
+interface RenderResourceProps {
+  resource: Resource;
+}
+
+const RenderResource: React.FC<RenderResourceProps> = ({ resource }) => {
   return (
     <div key={resource.name} className='my-5 pl-5 sm:pl-10'>
       <h5 className='text-xl font-light mb-5'>{resource.name}</h5>
@@ -13,7 +38,16 @@ const RenderResource = ({ resource }) => {
   );
 }
 
-const SkillSection = ({ title, elements }) => {
+interface SkillSectionProps {
+  title: string;
+  elements: React.ReactNode;
+}
+
+interface SkillDetailsProps {
+  skill: Skill;
+}
+
+const SkillSection: React.FC<SkillSectionProps> = ({ title, elements }) => {
   return (
     <div className='my-10'>
       <h5 className='text-blackish font-bold pl-5 text-xl sm:pl-10'>{title}</h5>
@@ -22,23 +56,23 @@ const SkillSection = ({ title, elements }) => {
   );
 }
 
-export default function SkillDetails({skill}) {
+const SkillDetails: React.FC<SkillDetailsProps> = ({skill}) => {
     
     const resourceElements = skill?.resources.map(resource => (
-      <RenderResource key={resource} resource={resource} /> 
+      <RenderResource key={resource.name} resource={resource} /> 
     ) );
     const courseElements = skill?.courses.map(course => ( 
-      <RenderResource key={course} resource={course} />
+      <RenderResource key={course.name} resource={course} />
     ));
     const booksElements = skill?.books.map(book => ( 
-      <RenderResource key={book} resource={book} />
+      <RenderResource key={book.name} resource={book} />
     ));
     const ytChannels = skill?.youtube.map(yt => ( 
-      <RenderResource key={yt} resource={yt} />
+      <RenderResource key={yt.name} resource={yt} />
     ));
     
     const additionalElements = skill?.others.map(other => (
-      <RenderResource key={other} resource={other} />
+      <RenderResource key={other.name} resource={other} />
     )); 
   
   return (
@@ -68,3 +102,5 @@ export default function SkillDetails({skill}) {
       </div>
   )
 }
+
+export default SkillDetails;

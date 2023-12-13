@@ -3,12 +3,33 @@ import SkillDetails from "@/app/components/SkillDetails";
 import Layout from "@/app/components/layoutSkillDetails";
 import Loading from "../loading";
 
-
 // Firebase configurations
 import { db } from '../../firebaseConfig';
 import { collection, doc, getDoc} from 'firebase/firestore';
 
-async function getSkillDetails(id, db) {
+
+// Define interfaces
+
+interface Resource {
+  name: string;
+  about: string;
+  website: string;
+  link: string;
+}
+
+interface Skill {
+  name: string;
+  resources: Resource[];
+  courses: Resource[];
+  books: Resource[];
+  youtube: Resource[];
+  others: Resource[];
+  conclusion: string;
+  conclusionmore: string;
+  conclusionlast: string;
+}
+
+async function getSkillDetails(id: string): Promise<Skill | null>  {
 
   const collectionRef = collection(db, 'skills');
   const docRef = doc(collectionRef, id);
@@ -17,7 +38,7 @@ async function getSkillDetails(id, db) {
   try {
     if (docSnapshot.exists()) {
       console.log(docSnapshot.data())
-      return docSnapshot.data();
+      return docSnapshot.data() as Skill;
     } else {
       console.error('Skill does not exist');
       return null;
@@ -29,8 +50,13 @@ async function getSkillDetails(id, db) {
   }
 }
 
-export default async function SkillDetailsPage({params}) {
-  const skill = await getSkillDetails(params.id, db)
+interface SkillDetailsPageProps {
+  params: { id: string };
+}
+
+
+export default async function SkillDetailsPage({params} : SkillDetailsPageProps) {
+  const skill = await getSkillDetails(params.id)
 
   return (
     <main>
@@ -38,7 +64,11 @@ export default async function SkillDetailsPage({params}) {
       <div className='skill-details pt-20 '>
         <Layout metaTitle={'Skill details | Abilitax'}>
           <Suspense fallback={<Loading />} >
-          <SkillDetails skill={skill} />
+          {skill !== null ? (
+              <SkillDetails skill={skill} />
+            ) : (
+              <p>Loading...</p>
+            )}
           </Suspense>
         </Layout>
       </div>

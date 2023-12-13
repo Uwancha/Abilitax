@@ -4,7 +4,23 @@ import Link from 'next/link';
 // Import date-fns to format date
 import { format } from 'date-fns';
 
-const BlogCard = ({post}) => {
+// Define interfaces
+
+interface BlogCardProps {
+  post: {
+    createdat: {
+      toDate: () => Date;
+    };
+    authorImage: string;
+    author: string;
+    title: string;
+    summary: string;
+    readmin: string;
+    id: string;
+  };
+}
+
+const BlogCard: React.FC<BlogCardProps> = ({post}) => {
 
   // Format date
   const dateFormat = 'MMM dd, yyyy'

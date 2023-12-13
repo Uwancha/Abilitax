@@ -5,12 +5,12 @@ import { collection, getDocs} from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import SkillCard from './SkillCard';
 
+// Define interfaces
+
 interface Skill {
-  categories: any;
-  name: string
-  data: []
-  resources: string
-  description: string
+  id: string;
+  name: string;
+  description: string;
 }
 
 
@@ -26,10 +26,13 @@ const SkillsCategories: React.FC = () => {
         const skills: Skill[]  = [];
 
         docs.forEach((doc) => {
-          skills.push({
-            id: doc.id,
-            ...doc.data(),
-          });
+          const data =  doc.data()
+          const skill: Skill = {
+            name: data.name,
+            description: data.description,
+            id: data.id,
+          }
+          skills.push(skill)
         });
 
         if (skills.length) {

@@ -5,9 +5,32 @@ import Layout from './layout';
 import { format } from 'date-fns';
 import Loading from '@/app/skills/loading';
 
+// Define Interfaces
 
+interface Content {
+  subtitle: string;
+  body: string;
+}
 
-const RenderIntroduction = ({intro} ) => {
+interface Post {
+  createdat: {
+    toDate: () => Date;
+  };
+  introduction: string[];
+  content: Content[];
+  tip: string;
+  conclusion: string;
+  image: string;
+  title: string;
+  authorImage: string;
+  author: string;
+}
+
+interface DetailsProps {
+  post: Post;
+}
+
+const RenderIntroduction = ({intro}: {intro:string} ) => {
   return (
     <div className='my-5 pl-5 sm:pl-10'>
       <p className='font-light'>{intro}</p>
@@ -15,7 +38,11 @@ const RenderIntroduction = ({intro} ) => {
   );
 }
 
-const RenderContent = ({ content }) => {
+interface RenderContentProps {
+  content: Content;
+}
+
+const RenderContent: React.FC<RenderContentProps> = ({ content }) => {
   return (
     <div className='pl-5 sm:pl-10 my-5'>
       <h5 className='mb-3 font-bold'>{content.subtitle}</h5>
@@ -24,7 +51,7 @@ const RenderContent = ({ content }) => {
   );
 }
 
-const RenderTip = ({ tip }) => {
+const RenderTip = ({ tip }: {tip: string}) => {
   return (
     <div className='p-4 my-5'>
       <p>{tip}</p>
@@ -32,7 +59,7 @@ const RenderTip = ({ tip }) => {
   );
 }
 
-const RenderConclusion = ({ conclusion }) => {
+const RenderConclusion = ({ conclusion }: {conclusion: string}) => {
   return (
     <div className='pl-5 sm:pl-10 my-5'>
       <p className='font-light'>{conclusion}</p>
@@ -40,7 +67,7 @@ const RenderConclusion = ({ conclusion }) => {
   );
 }
 
-export default function Details({post}) {
+const Details: React.FC<DetailsProps> = ({post}) => {
 
   if (!post) {
     return <div>Loading...</div>;
@@ -56,8 +83,6 @@ export default function Details({post}) {
   const introductionElements = post.introduction?.map((intro, index) => (
     <RenderIntroduction key={index} intro={intro} />
   ))
-    
-
     
   const blogBody = post.content?.map((c, index) => (
     <RenderContent key={index} content={c} />
@@ -116,3 +141,5 @@ export default function Details({post}) {
     </Layout>
   )
 }
+
+export default Details;

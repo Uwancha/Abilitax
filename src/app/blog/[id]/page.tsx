@@ -8,8 +8,28 @@ import Loading from '@/app/skills/loading';
 import { db } from '@/app/firebaseConfig';
 import { collection, doc, getDoc} from 'firebase/firestore';
 
+// Define interfaces
 
-async function getBlogDetails(id, db) {
+interface Content {
+  subtitle: string;
+  body: string;
+}
+
+interface Post {
+  createdat: {
+    toDate: () => Date;
+  };
+  introduction: string[];
+  content: Content[];
+  tip: string;
+  conclusion: string;
+  image: string;
+  title: string;
+  authorImage: string;
+  author: string;
+}
+
+async function getBlogDetails(id: string): Promise<Post | null> {
   
   const collectionRef = collection(db, 'blogs');
   const docRef = doc(collectionRef, id);
@@ -18,7 +38,7 @@ async function getBlogDetails(id, db) {
   try {
     
     if (docSnapshot.exists()) {
-      return docSnapshot.data();
+      return docSnapshot.data() as Post;
     } else {
       console.error('Blog does not exist');
       return null;
@@ -30,26 +50,24 @@ async function getBlogDetails(id, db) {
   };
 }
 
+interface BlogDetailsPageProps {
+  params: { id: string };
+}
 
-export default async function BlogDetail({params}) {
-  const post = await getBlogDetails(params.id, db)
+
+export default async function BlogDetail({params}: BlogDetailsPageProps) {
+  const post = await getBlogDetails(params.id)
   console.log(post)
-
-  const headerStyle = { 
-    backgroundColor: "#fff",
-    position: 'fixed',
-    width: '100%',
-    top: 0,
-    color: "slategray",
-    boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
-
-  }
 
   return (
     <div className='bg-whitesmoke py-10'>
-      <Nav sty={headerStyle} />
+      <Nav/>
       <Suspense fallback={<Loading />} >
-      <Details post={post}  />
+      {post !== null ? (
+              <Details post={post}  />
+            ) : (
+              <p>Loading...</p>
+            )}
       </Suspense>
     </div>
   )

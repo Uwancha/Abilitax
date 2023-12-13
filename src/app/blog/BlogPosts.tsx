@@ -7,16 +7,22 @@ import { db } from '../firebaseConfig';
 // Components
 import BlogCard from './BlogCard';
 
-interface Blog {
-  title: string
-  data: []
-  blog: string
-  description: string
+// Define interfaces
+
+interface BlogPost {
+   createdat: {
+    toDate: () => Date;
+  };
+  authorImage: string;
+  author: string;
+  title: string;
+  summary: string;
+  readmin: string;
+  id: string;
 }
 
-
 const BlogPosts: React.FC = () => {
-  const [posts, setPosts] = useState<Blog[]>([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,12 +30,21 @@ const BlogPosts: React.FC = () => {
         const docRef = collection(db, 'blogs');
         const docs = await getDocs(docRef);
         console.log(docs)
-        const blogs: Blog[]  = [];
+        const blogs: BlogPost[]  = [];
 
-        docs.forEach((doc) => blogs.push({
+        docs.forEach((doc) =>{
+          const data = doc.data();
+          const blog: BlogPost = {
             id: doc.id,
-            ...doc.data(),
-        }));
+            createdat: data.createdat,
+            authorImage: data.authorImage,
+            author: data.author,
+            title: data.title,
+            summary: data.summary,
+            readmin: data.readmin,
+          };
+          blogs.push(blog);
+        });
 
         if (blogs.length) {
           setPosts(blogs)
