@@ -14,14 +14,14 @@ export default function Layout({ children} : {children:ReactNode}) {
         />
         <meta
           property="og:url"
-          content={`https://merekverse.com`}
+          content={`https://abilitax.netlify.app/`}
         />
         <link
           rel="canonical"
-          href={`https://merekverse.com/skills`}
+          href={`https://abilitax.netlify.app/`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Merek Verse" />
+        <meta property="og:site_name" content="Abilitax" />
         <meta
           property="og:description"
           content="Collections of best curated resources to learn in demand skills"

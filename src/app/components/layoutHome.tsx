@@ -18,11 +18,11 @@ export default function Layout({children}:{children:ReactNode}) {
         />
         <meta
           property="og:url"
-          content={`https://abilitax.com`}
+          content={`https://abilitax.netlify.app/`}
         />
         <link
           rel="canonical"
-          href={`https://abilitax.com`}
+          href={`https://abilitax.netlify.app/`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Abilitax" />

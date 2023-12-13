@@ -20,12 +20,12 @@ export default function Layout({children}:{children:ReactNode}) {
                 <meta property="og:image:height" content="630"/>
     
                 <meta name="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:url" content="https://www.abilitax.com"/>
+                <meta property="twitter:url" content="https://abilitax.netlify.app/"/>
                 <meta property="twitter:title" content='title'/>
                 <meta property="twitter:description" content='description'/>
                 <meta property="twitter:image" content="/og.png"/>
     
-                <link rel="canonical" href="https://www.abilitax.com"/>
+                <link rel="canonical" href="https://abilitax.netlify.app/"/>
     
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
