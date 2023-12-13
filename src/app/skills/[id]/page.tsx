@@ -6,6 +6,8 @@ import Loading from "../loading";
 // Firebase configurations
 import { db } from '../../firebaseConfig';
 import { collection, doc, getDoc} from 'firebase/firestore';
+import Nav from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
 
 // Define interfaces
@@ -59,9 +61,9 @@ export default async function SkillDetailsPage({params} : SkillDetailsPageProps)
   const skill = await getSkillDetails(params.id)
 
   return (
-    <main>
-      
-      <div className='skill-details pt-20 '>
+    <>
+      <Nav />
+      <div className='skill-details py-10'>
         <Layout metaTitle={'Skill details | Abilitax'}>
           <Suspense fallback={<Loading />} >
           {skill !== null ? (
@@ -72,6 +74,7 @@ export default async function SkillDetailsPage({params} : SkillDetailsPageProps)
           </Suspense>
         </Layout>
       </div>
-    </main>
+      <Footer />
+    </>
   )
 }

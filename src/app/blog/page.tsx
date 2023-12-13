@@ -8,14 +8,16 @@ import Loading from "./loading";
 
 const Blog: React.FC = () => {
     return (
-        <div className="blog-home py-40" >
+        <>
             <Nav />
-            <div className="mt-20">
-                <Suspense fallback={<Loading />}>
-                <BlogPosts />
-                </Suspense>
-            </div>               
-        </div>
+            <div className="blog-home py-10" >
+                <div className="mt-20">
+                    <Suspense fallback={<Loading />}>
+                    <BlogPosts />
+                    </Suspense>
+                </div>               
+            </div>
+        </>
     )
 }
 

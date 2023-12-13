@@ -30,7 +30,7 @@ const SkillsCategories: React.FC = () => {
           const skill: Skill = {
             name: data.name,
             description: data.description,
-            id: data.id,
+            id: doc.id,
           }
           skills.push(skill)
         });

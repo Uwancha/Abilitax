@@ -30,9 +30,7 @@ export default function Layout({children }: {children: ReactNode}) {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
             </Head>
-            <Suspense fallback={<Loading />}>
             {children}
-            </Suspense>
         </>
     )
 }

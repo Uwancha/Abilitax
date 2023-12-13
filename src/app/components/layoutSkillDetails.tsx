@@ -1,9 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 
-import Nav from "./Header";
-import Footer from "./Footer";
-
 export default function Layout({ children, metaTitle }: {
   children: ReactNode, 
   metaTitle: ReactNode
@@ -34,9 +31,7 @@ export default function Layout({ children, metaTitle }: {
         />
         <meta property="og:title" content="Abilitax" />
       </Head>
-        <Nav />
         {children}
-        <Footer />
     </>
   );
 }

@@ -3,7 +3,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 
-import Nav from "./Header";
 import Footer from "./Footer";
 
 export default function Layout({children}:{children:ReactNode}) {
@@ -33,7 +32,6 @@ export default function Layout({children}:{children:ReactNode}) {
         />
         <meta property="og:title" content='Abilitax' />
       </Head>
-        <Nav />
         {children}
         <Footer />
     </>

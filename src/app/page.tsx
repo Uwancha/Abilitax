@@ -6,6 +6,7 @@ import Layout from './components/layoutHome';
 
 // components
 import LatestBlogPosts from './components/latestBlogPosts';
+import Nav from './components/Header';
 
 
 export default function Home() {
@@ -13,8 +14,9 @@ export default function Home() {
     <main>
     <Layout >
       <div className='home'>
-            <header className='hero'>
-                <h1 className='text-xl font-extrabold mt-60 pl-4
+            <header className='hero pt-10'>
+                <Nav />
+                <h1 className='text-xl font-extrabold mt-40 pl-4
                 sm:pl-60
                 sm:text-3xl
                 '

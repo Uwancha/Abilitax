@@ -76,7 +76,7 @@ const SkillDetails: React.FC<SkillDetailsProps> = ({skill}) => {
     )); 
   
   return (
-      <div className='w-full mx-auto py-10 px-5 mt-10 mb-10 bg-white rounded-lg sm:w-2/4 '>
+      <div className='w-full mx-auto py-10 px-5 mb-10 bg-white rounded-lg sm:w-2/4 '>
         <h2 className='text-blackish text-xl text-center font-bold mb-5 sm:text-2xl '>{skill.name}</h2>
       
         <section className='my-10 text-blackish'>
