@@ -9,7 +9,7 @@ import Image from "next/image";
 const Nav: React.FC = ({sty}) => {
     
     return (
-        <div className="flex justify-between items-center py-5 sm:px-20" style={sty}>
+        <div className="flex justify-between items-center py-2 sm:px-20" style={sty}>
             <Link href='/' className="flex items-center hover:opacity-50">
                 <Image src={'/logo-.png'} alt='logo' className="w-[80px] sm:w-[150px]" width={100} height={150} priority />
                 <h3 className="text-silver  font-bold sm:text-3xl" style={{marginLeft:'-15px'}}>Abilitax</h3>
