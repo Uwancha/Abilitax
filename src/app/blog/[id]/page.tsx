@@ -3,9 +3,38 @@ import Details from './blogDetails';
 import Nav from '@/app/components/Header';
 import Loading from '@/app/skills/loading';
 
-function BlogDetail(params: {id:string}) {
-  const id = params.id;
+
+// Firebase configuration
+import { db } from '@/app/firebaseConfig';
+import { collection, doc, getDoc} from 'firebase/firestore';
+
+
+async function getBlogDetails(id, db) {
   
+  const collectionRef = collection(db, 'blogs');
+  const docRef = doc(collectionRef, id);
+
+  const docSnapshot = await getDoc(docRef);
+  try {
+    
+    if (docSnapshot.exists()) {
+      return docSnapshot.data();
+    } else {
+      console.error('Blog does not exist');
+      return null;
+    }
+    
+  } catch (error) {
+    console.log('An error has occured', error);
+    return null;
+  };
+}
+
+
+export default async function BlogDetail({params}) {
+  const post = await getBlogDetails(params.id, db)
+  console.log(post)
+
   const headerStyle = { 
     backgroundColor: "#fff",
     position: 'fixed',
@@ -20,11 +49,8 @@ function BlogDetail(params: {id:string}) {
     <div className='bg-whitesmoke py-10'>
       <Nav sty={headerStyle} />
       <Suspense fallback={<Loading />} >
-      <Details id={id} />
+      <Details post={post}  />
       </Suspense>
     </div>
   )
 }
-
-
-export { BlogDetail }
