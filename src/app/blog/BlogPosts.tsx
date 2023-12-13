@@ -29,7 +29,7 @@ const BlogPosts: React.FC = () => {
       try {
         const docRef = collection(db, 'blogs');
         const docs = await getDocs(docRef);
-        console.log(docs)
+        
         const blogs: BlogPost[]  = [];
 
         docs.forEach((doc) =>{
@@ -58,7 +58,6 @@ const BlogPosts: React.FC = () => {
 
     fetchData();
   }, []);
-  console.log(posts);
 
   return (
     <div className='mb-10'>

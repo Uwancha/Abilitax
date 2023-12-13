@@ -27,7 +27,7 @@ const LatestBlogPosts: React.FC = () => {
       try {
         const docRef = collection(db, 'blogs');
         const docs = await getDocs(docRef);
-        console.log(docs)
+        
         const blogs: LatestBlogPost[]  = [];
 
         docs.forEach((doc) => {
@@ -56,7 +56,6 @@ const LatestBlogPosts: React.FC = () => {
 
     fetchData();
   }, []);
-  console.log(posts);
 
   return (
     <div className='w-full mb-10'>

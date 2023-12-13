@@ -22,7 +22,7 @@ const SkillsCategories: React.FC = () => {
       try {
         const docRef = collection(db, 'skills');
         const docs = await getDocs(docRef);
-        console.log(docs)
+        
         const skills: Skill[]  = [];
 
         docs.forEach((doc) => {
@@ -47,7 +47,6 @@ const SkillsCategories: React.FC = () => {
 
     fetchData();
   }, []);
-  console.log(data);
 
   return (
     <div className='mb-10'>

@@ -39,7 +39,6 @@ async function getSkillDetails(id: string): Promise<Skill | null>  {
   const docSnapshot = await getDoc(docRef);
   try {
     if (docSnapshot.exists()) {
-      console.log(docSnapshot.data())
       return docSnapshot.data() as Skill;
     } else {
       console.error('Skill does not exist');
