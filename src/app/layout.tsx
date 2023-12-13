@@ -21,15 +21,39 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <Head>
+      <meta name="robots" content="follow, index" />
         <title>Abilitax</title>
-        <meta name="description" content='A collections of curated resources to learn in demand skills' />
+        <meta
+          content="Collections of best curated resources to learn in demand skills in 2024"
+          name="description"
+        />
+        <meta
+          property="og:url"
+          content={`https://abilitax.netlify.app/`}
+        />
+        <link
+          rel="canonical"
+          href={`https://abilitax.netlify.app/`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Abilitax" />
+        <meta
+          property="og:description"
+          content="Collections of best curated resources to learn in demand skills"
+        />
+        <meta property="og:title" content='Abilitax' />
 
-        <meta property="og:title" content='Abilitax'/>
+        
+        <meta property="og:title" content='Abilitax' />
         <meta property="og:description" content='A collections of curated resources to learn in demand skills' />
+        <meta property="og:image" content='/AbiliTax-logo (1).png' /> 
+        <meta property="og:image:width" content="630" /> 
+        <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content='Abilitax' />
         <meta name="twitter:description" content='A collections of curated resources to learn in demand skills' />
+        <meta name="twitter:image" content='./AbiliTax-logo (1).png' /> 
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
