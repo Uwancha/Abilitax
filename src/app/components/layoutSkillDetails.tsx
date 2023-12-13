@@ -9,16 +9,6 @@ export default function Layout({ children, metaTitle }: {
   metaTitle: ReactNode
 }) {
 
-  const headerStyle = { 
-    backgroundColor: "#fff",
-    position: 'absolute',
-    width: '100%',
-    top: 0,
-    color: "slategray",
-
-    boxShadow:  'rgba(50, 50, 93, 0.1) 0px 13px 27px -25px,rgba(0, 0, 0, 0.25) 0px 8px 16px -20px',
-  }
-
   return (
     <>
       <Head>
@@ -42,9 +32,9 @@ export default function Layout({ children, metaTitle }: {
           property="og:description"
           content="Collections of best curated resources to learn in demand skills"
         />
-        <meta property="og:title" content={metaTitle} />
+        <meta property="og:title" content="Abilitax" />
       </Head>
-        <Nav sty={headerStyle}/>
+        <Nav />
         {children}
         <Footer />
     </>

@@ -7,14 +7,6 @@ import Nav from "./Header";
 import Footer from "./Footer";
 
 export default function Layout({children}:{children:ReactNode}) {
-  const headerStyle = {
-    backgroundColor: 'transparent', 
-    transition: 'background-color 1.5s ease',
-    position: 'absolute',
-    width: '100%',
-    top: 0,
-    color: "#fff",
-  }
 
   return (
     <>
@@ -41,7 +33,7 @@ export default function Layout({children}:{children:ReactNode}) {
         />
         <meta property="og:title" content='Abilitax' />
       </Head>
-        <Nav sty={headerStyle}/>
+        <Nav />
         {children}
         <Footer />
     </>
