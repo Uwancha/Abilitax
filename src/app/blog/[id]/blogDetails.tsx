@@ -33,7 +33,7 @@ interface DetailsProps {
 const RenderIntroduction = ({intro}: {intro:string} ) => {
   return (
     <div className='my-5 pl-5 sm:pl-10'>
-      <p className='font-light'>{intro}</p>
+      <p className='blackish font-light'>{intro}</p>
     </div>
   );
 }
@@ -46,7 +46,7 @@ const RenderContent: React.FC<RenderContentProps> = ({ content }) => {
   return (
     <div className='pl-5 sm:pl-10 my-5'>
       <h5 className='mb-3 font-bold'>{content.subtitle}</h5>
-      <p className='font-light'>{content.body}</p>
+      <p className='blackish font-light'>{content.body}</p>
     </div>
   );
 }
@@ -62,7 +62,7 @@ const RenderTip = ({ tip }: {tip: string}) => {
 const RenderConclusion = ({ conclusion }: {conclusion: string}) => {
   return (
     <div className='pl-5 sm:pl-10 my-5'>
-      <p className='font-light'>{conclusion}</p>
+      <p className='blackish font-light'>{conclusion}</p>
     </div>
   );
 }
