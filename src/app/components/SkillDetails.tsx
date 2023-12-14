@@ -32,7 +32,7 @@ const RenderResource: React.FC<RenderResourceProps> = ({ resource }) => {
       <h5 className='text-xl font-light mb-5'>{resource.name}</h5>
       <p className=' mb-5'>{resource.about}</p>
       <Link href={resource.website || resource.link} className='link'>
-        View Resource
+        View Resource &gt;&gt;
       </Link>
     </div>
   );
