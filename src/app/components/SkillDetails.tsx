@@ -58,20 +58,20 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, elements }) => {
 
 const SkillDetails: React.FC<SkillDetailsProps> = ({skill}) => {
     
-    const resourceElements = skill?.resources.map(resource => (
+    const resourceElements = skill.resources?.map(resource => (
       <RenderResource key={resource.name} resource={resource} /> 
     ) );
-    const courseElements = skill?.courses.map(course => ( 
+    const courseElements = skill.courses?.map(course => ( 
       <RenderResource key={course.name} resource={course} />
     ));
-    const booksElements = skill?.books.map(book => ( 
+    const booksElements = skill.books && skill.books.map(book => ( 
       <RenderResource key={book.name} resource={book} />
     ));
-    const ytChannels = skill?.youtube.map(yt => ( 
+    const ytChannels = skill.youtube?.map(yt => ( 
       <RenderResource key={yt.name} resource={yt} />
     ));
     
-    const additionalElements = skill?.others.map(other => (
+    const additionalElements = skill.others?.map(other => (
       <RenderResource key={other.name} resource={other} />
     )); 
   
