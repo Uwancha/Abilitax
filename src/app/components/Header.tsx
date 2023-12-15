@@ -9,8 +9,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const breakPoint = 768
-
 const DesktopMenu = () => {
     return (
         <nav className="flex">
@@ -21,6 +19,23 @@ const DesktopMenu = () => {
         </nav> 
     )
 }
+
+const NavLinks = ({ close } : {close : any}) => (
+  <nav className="flex flex-col items-start gap-10 mt-60">
+    <Link href="/" onClick={close} className="text-2xl hover:opacity-50">
+      Home
+    </Link>
+    <Link href="/skills" onClick={close} className="text-2xl hover:opacity-50">
+      Skills
+    </Link>
+    <Link href="/blog" onClick={close} className="text-2xl hover:opacity-50">
+      Blog
+    </Link>
+    <Link href="/about" onClick={close} className="text-2xl hover:opacity-50">
+      About
+    </Link>
+  </nav>
+);
 
 const MobileMenu = ({ isopen, mobile, toggleMenu } : {isopen : boolean, mobile: boolean, toggleMenu : any}) => {
     return ( 
@@ -44,28 +59,11 @@ const MobileMenu = ({ isopen, mobile, toggleMenu } : {isopen : boolean, mobile: 
       </div> 
     );
   };
-  
-  const NavLinks = ({ close } : {close : any}) => (
-    <nav className="flex flex-col items-start gap-10 mt-60">
-      <Link href="/" onClick={close} className="text-2xl hover:opacity-50">
-        Home
-      </Link>
-      <Link href="/skills" onClick={close} className="text-2xl hover:opacity-50">
-        Skills
-      </Link>
-      <Link href="/blog" onClick={close} className="text-2xl hover:opacity-50">
-        Blog
-      </Link>
-      <Link href="/about" onClick={close} className="text-2xl hover:opacity-50">
-        About
-      </Link>
-    </nav>
-  );
 
 
 const Nav: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const isMobile = useMediaQuery({ maxWidth: breakPoint });
+    const isMobile = useMediaQuery({ maxWidth: 768 });
 
     const toggleMenu = () => setIsOpen(!isOpen);
     
