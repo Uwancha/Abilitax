@@ -12,9 +12,7 @@ const Blog: React.FC = () => {
             <Nav />
             <div className="blog-home py-10" >
                 <div className="mt-20">
-                    <Suspense fallback={<Loading />}>
                     <BlogPosts />
-                    </Suspense>
                 </div>               
             </div>
         </>
