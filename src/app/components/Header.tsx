@@ -30,7 +30,7 @@ const MobileMenu = ({ isopen, mobile, toggleMenu } : {isopen : boolean, mobile: 
             onClick={toggleMenu}
             size={30}
         /> }
-        {isopen && <div className="fixed top-0 left-0 w-full h-full bg-black/50" onClick={toggleMenu}>
+        {isopen && <div className="fixed top-0 left-0 w-full h-full bg-black/70" onClick={toggleMenu}>
         <div className="absolute top-0 left-0 w-full h-full bg-black/70 px-20 text-silver" >
             <NavLinks close={toggleMenu} />
           
