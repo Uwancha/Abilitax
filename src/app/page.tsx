@@ -14,9 +14,9 @@ export default function Home() {
     <main>
     <Layout >
       <div className='home'>
-            <header className='hero pt-10'>
+            <header className='hero pt-8'>
                 <Nav />
-                <h1 className='text-xl font-extrabold mt-40 pl-4
+                <h1 className='text-xl font-extrabold mt-20 pl-4
                 sm:pl-60
                 sm:text-3xl
                 '
@@ -49,7 +49,7 @@ export default function Home() {
                 </Link>
                 </article>
                 <Link href={'/#talents'}
-                    className='text-white text-5xl mx-auto mt-auto pb-4 hover:bg-transparent
+                    className='text-white text-5xl mx-auto mt-auto pb-14 hover:bg-transparent
                     hover:opacity-60 transition duration-500 ease-in-out'
                 >&darr;</Link>
             </header>
