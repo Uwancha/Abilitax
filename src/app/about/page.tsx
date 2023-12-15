@@ -54,6 +54,7 @@ const About: React.FC = () => {
                 <div>
                     <Image
                         src={creatorsPhoto} alt={'creator photo'} 
+                        width={300}
                         height={300}
                         className='rounded-md shadow-md hover:shadow-lg'
                     />
