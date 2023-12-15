@@ -8,6 +8,16 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import Link from "next/link";
 import Image from "next/image";
 
+interface MobileMenuProps {
+  isopen: boolean;
+  mobile: boolean; 
+  toggleMenu: () => void;
+}
+
+
+interface NavLinksProps {
+  close: () => void;
+}
 
 const DesktopMenu = () => {
     return (
@@ -20,7 +30,7 @@ const DesktopMenu = () => {
     )
 }
 
-const NavLinks = ({ close } : {close : any}) => (
+const NavLinks: React.FC<NavLinksProps> = ({ close }) => (
   <nav className="flex flex-col items-start gap-10 mt-60">
     <Link href="/" onClick={close} className="text-2xl hover:opacity-50">
       Home
@@ -37,7 +47,8 @@ const NavLinks = ({ close } : {close : any}) => (
   </nav>
 );
 
-const MobileMenu = ({ isopen, mobile, toggleMenu } : {isopen : boolean, mobile: boolean, toggleMenu : any}) => {
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ isopen, mobile, toggleMenu }) => {
     return ( 
         <div>
         {mobile && <FaBars 
