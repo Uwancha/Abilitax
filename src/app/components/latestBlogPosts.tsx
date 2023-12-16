@@ -32,15 +32,19 @@ const LatestBlogPosts: React.FC = () => {
 
         docs.forEach((doc) => {
           const data = doc.data();
-          const blog: LatestBlogPost = {
-            id: doc.id,
-            authorImage: data.authorImage,
-            author: data.author,
-            title: data.title,
-            summary: data.summary,
-            readmin: data.readmin,
-          };
-          blogs.push(blog);
+
+          if (data.category === 'latest') {
+            const blog: LatestBlogPost = {
+              id: doc.id,
+              authorImage: data.authorImage,
+              author: data.author,
+              title: data.title,
+              summary: data.summary,
+              readmin: data.readmin,
+            };
+
+            blogs.push(blog);
+          }
         }
         );
 
