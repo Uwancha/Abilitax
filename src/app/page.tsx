@@ -48,10 +48,6 @@ export default function Home() {
                     Browse Resources
                 </Link>
                 </article>
-                <Link href={'/#talents'}
-                    className='text-white text-5xl mx-auto mt-auto pb-14 hover:bg-transparent
-                    hover:opacity-60 transition duration-500 ease-in-out'
-                >&darr;</Link>
             </header>
 
             <article id='talents' className='article-talents'>
