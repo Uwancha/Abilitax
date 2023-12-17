@@ -27,11 +27,11 @@ export default function RootLayout({
         />
         <meta
           property="og:url"
-          content={`https://abilitax.netlify.app/`}
+          content="https://abilitax.netlify.app/"
         />
         <link
           rel="canonical"
-          href={`https://abilitax.netlify.app/`}
+          href="https://abilitax.netlify.app/"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Abilitax" />
@@ -44,14 +44,14 @@ export default function RootLayout({
         
         <meta property="og:title" content='Abilitax' />
         <meta property="og:description" content='A collections of curated resources to learn in demand skills' />
-        <meta property="og:image" content='/AbiliTax-logo (1).png' /> 
+        <meta property="og:image" content='/AbiliTax-logo.png' /> 
         <meta property="og:image:width" content="630" /> 
         <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content='Abilitax' />
         <meta name="twitter:description" content='A collections of curated resources to learn in demand skills' />
-        <meta name="twitter:image" content='./AbiliTax-logo (1).png' /> 
+        <meta name="twitter:image" content='/AbiliTax-logo.png' /> 
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
