@@ -9,6 +9,77 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Abilitax',
   description: 'A collections of curated resources to learn in demand skills',
+
+  generator: 'Abilitax',
+  applicationName: 'Abilitax',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Abilitax', 'Skills', 'resoures'],
+  authors: [{ name: 'Sitota' }, { name: 'Sitota Alemu', url: 'https://abilitax.netlify.app/' }],
+  creator: 'Sitota Alemu',
+  publisher: 'Sitota Alemu',
+
+
+
+  metadataBase: new URL('https://abilitax.netlify.app/'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
+
+  icons: {icon: [{ url: '/favicon.ico' }, new URL('/favicon.ico', 'https://abilitax.netlify.app/')]},
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+
+  
+  openGraph: {
+    title: 'Abilitax',
+    description: 'A collections of curated resources to learn in demand skills',
+    url: 'https://abilitax.netlify.app/',
+    siteName: 'Abilitax',
+    images: [
+      {
+        url: 'https://abilitax.netlify.app/AbiliTax-logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Abilitax logo',
+      },
+      {
+        url: 'https://abilitax.netlify.app/AbiliTax-logo.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Abilitax logo',
+      },
+      ],
+      locale: 'en_US',
+      type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abilitax',
+    description: 'A collections of curated resources to learn in demand skills',
+    creator: 'Abilitax',
+    images: ['https://abilitax.netlify.app/AbiliTax-logo.png'],
+  },
+
+
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+  },
+
 }
 
 export default function RootLayout({
@@ -18,48 +89,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <Head>
-      <meta name="robots" content="follow, index" />
-        <title>Abilitax</title>
-        <meta
-          content="Collections of best curated resources to learn in demand skills in 2024"
-          name="description"
-        />
-        <meta
-          property="og:url"
-          content="https://abilitax.netlify.app/"
-        />
-        <link
-          rel="canonical"
-          href="https://abilitax.netlify.app/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Abilitax" />
-        <meta
-          property="og:description"
-          content="Collections of best curated resources to learn in demand skills"
-        />
-        <meta property="og:title" content='Abilitax' />
-
-        
-        <meta property="og:title" content='Abilitax' />
-        <meta property="og:description" content='A collections of curated resources to learn in demand skills' />
-        <meta property="og:image" content='/AbiliTax-logo.png' /> 
-        <meta property="og:image:width" content="630" /> 
-        <meta property="og:image:height" content="630" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content='Abilitax' />
-        <meta name="twitter:description" content='A collections of curated resources to learn in demand skills' />
-        <meta name="twitter:image" content='/AbiliTax-logo.png' /> 
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="icon" href="/favicon.ico" />
-
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      </Head>
       <body className={inter.className}>
         {children}
       </body>
