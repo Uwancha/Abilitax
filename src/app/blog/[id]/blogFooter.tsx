@@ -52,7 +52,7 @@ export default function BlogFooter() {
                         className="ml-auto mr-4 sm:ml-0 rounded-full"
                     />
                 </Link>
-                <Link href={'https://t.me/abilitax'}
+                <Link href={'https://github.com/Uwancha'}
                     className="flex items-center hover:opacity-50
                     sm:gap-1"
                 >
