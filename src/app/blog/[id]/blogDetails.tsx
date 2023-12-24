@@ -4,6 +4,7 @@ import Layout from './layout';
 // Import date-fns to format date
 import { format } from 'date-fns';
 import Loading from '@/app/skills/loading';
+import BlogFooter from './blogFooter';
 
 // Define Interfaces
 
@@ -137,6 +138,7 @@ const Details: React.FC<DetailsProps> = ({post}) => {
 
         </section>
       </div>
+      <BlogFooter />
       </Suspense>
     </Layout>
   )
