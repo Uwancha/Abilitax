@@ -1,6 +1,3 @@
-'use client'
-
-import React, { useEffect, useState } from 'react';
 import { collection, getDocs} from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
@@ -8,9 +5,8 @@ import { db } from '../firebaseConfig';
 import BlogCard from './BlogCard';
 
 // Define interfaces
-
 interface BlogPost {
-   createdat: {
+  createdat: {
     toDate: () => Date;
   };
   authorImage: string;
@@ -19,51 +15,57 @@ interface BlogPost {
   summary: string;
   readmin: string;
   id: string;
-}
+};
 
-const BlogPosts: React.FC = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+const fetchData = async () => {
+  try {
+    const docRef = collection(db, 'blogs');
+    const docs = await getDocs(docRef);
+    
+    const blogs: BlogPost[]  = [];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const docRef = collection(db, 'blogs');
-        const docs = await getDocs(docRef);
-        
-        const blogs: BlogPost[]  = [];
+    docs.forEach((doc) =>{
+      const data = doc.data();
+      const blog: BlogPost = {
+        id: doc.id,
+        createdat: data.createdat,
+        authorImage: data.authorImage,
+        author: data.author,
+        title: data.title,
+        summary: data.summary,
+        readmin: data.readmin,
+      };
+      blogs.push(blog);
+    });
 
-        docs.forEach((doc) =>{
-          const data = doc.data();
-          const blog: BlogPost = {
-            id: doc.id,
-            createdat: data.createdat,
-            authorImage: data.authorImage,
-            author: data.author,
-            title: data.title,
-            summary: data.summary,
-            readmin: data.readmin,
-          };
-          blogs.push(blog);
-        });
-
-        if (blogs.length) {
-          setPosts(blogs)
-        } else {
-          console.log('No such document!');
-        }
-      } catch (error) {
-        console.error('Error fetching document:', error);
-      }
+    if (blogs.length) {
+      return blogs;
+    } else {
+      console.log('No such document!');
+      return null;
     };
+  } catch (error) {
+    console.error('Error fetching document:', error);
+    return null;
+  };
+};
 
-    fetchData();
-  }, []);
+const BlogPosts = async () => {
+  const posts = await fetchData();
 
   return (
     <div className='mb-10'>
-      <div className="posts w-full sm:w-2/4 sm:mx-auto">{posts?.map(post => (
-            <BlogCard post = {post} key={post.id} />
-      ) ) } 
+      <div className="flex flex-col gap-2 w-full sm:w-2/4 sm:mx-auto">
+        {posts?.map(post => (
+        <BlogCard post = {post} key={post.id} />
+        ) ) } 
+
+      {posts === null && 
+        <div className='flex flex-col gap-8 my-24'>
+          <p className='midnight text-xl'>Network problem occurred</p>
+          <p className='lime text-xl'>Please refresh the page!</p>
+        </div>
+      }
       </div>
     </div>
   );

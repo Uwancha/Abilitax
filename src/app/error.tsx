@@ -1,5 +1,7 @@
-'use client'
- 
+'use client';
+
+import Nav from "./components/Header"
+
 export default function Error({
   error,
   reset,
@@ -8,9 +10,12 @@ export default function Error({
   reset: () => void
 }) {
   return (
-    <div>
-      <h2 className="text-xl">Something went wrong!</h2>
-      <button className="rounded-full" onClick={() => reset()}>Please try again</button>
-    </div>
-  )
-}
+    <>
+      <Nav />
+      <div className="lg:w-1/4 mx-auto my-40 ">
+        <h2 className="text-xl midnight mb-8">Something went wrong!</h2>
+        <button className="rounded-full lime cursor-pointer" onClick={() => reset()}>Please try again</button>
+      </div>
+    </>
+  );
+};

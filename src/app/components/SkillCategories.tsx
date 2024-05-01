@@ -1,60 +1,61 @@
-'use client'
-
-import React, { useEffect, useState } from 'react';
 import { collection, getDocs} from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import SkillCard from './SkillCard';
 
-// Define interfaces
-
+// Define interface
 interface Skill {
   id: string;
   name: string;
   description: string;
-}
+};
 
+const fetchData = async () => {
+  try {
+    const docRef = collection(db, 'skills');
+    const docs = await getDocs(docRef);
+    
+    const skills: Skill[]  = [];
 
-const SkillsCategories: React.FC = () => {
-  const [data, setData] = useState<Skill[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const docRef = collection(db, 'skills');
-        const docs = await getDocs(docRef);
-        
-        const skills: Skill[]  = [];
-
-        docs.forEach((doc) => {
-          const data =  doc.data()
-          const skill: Skill = {
-            name: data.name,
-            description: data.description,
-            id: doc.id,
-          }
-          skills.push(skill)
-        });
-
-        if (skills.length) {
-          setData(skills)
-        } else {
-          console.log('No such document!');
-        }
-      } catch (error) {
-        console.error('Error fetching document:', error);
+    docs.forEach((doc) => {
+      const data =  doc.data()
+      const skill: Skill = {
+        name: data.name,
+        description: data.description,
+        id: doc.id,
       }
-    };
+      skills.push(skill)
+    });
 
-    fetchData();
-  }, []);
+    if (skills.length) {
+      return skills;
+    } else {
+      console.log('No such document!');
+      return null;
+    };
+  } catch (error) {
+    console.error('Error fetching document:', error);
+    return null;
+  };
+};
+
+const SkillsCategories = async () => {
+  const data = await fetchData();
 
   return (
-    <div className='mb-10'>
-      <div>{data?.map(d => (
-          <article className='bg-white flex flex-col gap-1 mb-5 mx-auto w-3/4 sm:w-1/2 ' key={d.name}>
+    <div className='mb-24'>
+      <div className='flex flex-col gap-16'>
+        {data?.map(d => (
+          <article className='bg_midnight text-default flex flex-col px-8 py-8 gap-1 mx-auto w-3/4 sm:w-1/2 rounded' key={d.name}>
             <SkillCard skill={d} />
           </article>
-      ) ) } 
+        ) ) } 
+
+      {data === null && 
+        <div className='w-full lg:w-1/2 mx-auto text-center flex flex-col gap-8 my-24'>
+          <p className='midnight text-xl'>Network problem occurred.</p>
+          <p className='lime'>Please refresh the page!</p>
+        </div>
+      }
       </div>
     </div>
   );
