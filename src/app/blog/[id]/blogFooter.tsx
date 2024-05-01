@@ -1,21 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Social icons and photo 
-import linkedinIcon from "../../../../public/linkedin-original.svg";
-import instagramIcon from "../../../../public/instagram.svg";
-import githubIcon from "../../../../public/github.svg";
-import myphoto from "../../../../public/myPhoto.jpeg";
-
-
-
 export default function BlogFooter() {
   return (
     <div className="w-full sm:w-1/2 flex flex-col gap-6 bg-white mx-auto mt-10 p-10 rounded-lg">
         <section className="flex flex-col gap-10">
             <div className="flex items-center gap-5">
                 <Image
-                    src={myphoto}
+                    src={'/myPhoto.jpeg'}
                     width={50}
                     height={50}
                     alt={"link to LinkedIn"}
@@ -34,8 +26,9 @@ export default function BlogFooter() {
                 >
                     <p className="font-light" >LinkedIn</p>
                     <Image
-                        src={linkedinIcon}
+                        src={'/linkedin-original.svg'}
                         width={20}
+                        height={20}
                         alt={"link to LinkedIn"}
                         className="ml-auto mr-4 sm:ml-0 rounded-full"
                     />
@@ -46,8 +39,9 @@ export default function BlogFooter() {
                 >
                     <p className="font-light" >Instagram</p>
                     <Image
-                        src={instagramIcon}
+                        src={'/instagram.svg'}
                         width={20}
+                        height={20}
                         alt={"link to instagram"}
                         className="ml-auto mr-4 sm:ml-0 rounded-full"
                     />
@@ -58,8 +52,9 @@ export default function BlogFooter() {
                 >
                     <p className="font-light" >GitHub</p>
                     <Image
-                        src={githubIcon}
+                        src={'/github.svg'}
                         width={20}
+                        height={20}
                         alt={"link to github"}
                         className="ml-auto mr-4 sm:ml-0 rounded-full"
                     />
@@ -69,5 +64,5 @@ export default function BlogFooter() {
         <p className="mt-5 text-xl font-normal">Always Thriving to Learn:</p>
         <p className="mb-5 text-xl font-light">&quot;I love sharing. I share what I learned, and I learn more through sharing.&quot;</p>
     </div>
-  )
-}
+  );
+};

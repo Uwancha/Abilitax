@@ -1,9 +1,7 @@
-import React, { ReactNode, Suspense } from "react";
+import { ReactNode } from "react";
 import Head from "next/head";
-import Loading from "@/app/skills/loading";
 
 export default function Layout({children }: {children: ReactNode}) {
-
     return (
         <>
             <Head>
@@ -32,5 +30,5 @@ export default function Layout({children }: {children: ReactNode}) {
             </Head>
             {children}
         </>
-    )
-}
+    );
+};
