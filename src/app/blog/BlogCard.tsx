@@ -29,7 +29,7 @@ const BlogCard: React.FC<BlogCardProps> = ({post}) => {
       <div className="flex gap-2 items-center mb-6" >
           <img src={post.authorImage} className="authorImage" alt="Author's image" />
           <div>
-            <p className='font-bold mb-.5' >{post.author}</p>
+            <p className='font-semi-bold mb-.5' >{post.author}</p>
             <p>{formatedDate}</p>
           </div>
       </div>

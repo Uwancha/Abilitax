@@ -21,27 +21,27 @@ interface NavLinksProps {
 
 const DesktopMenu = () => {
   return (
-    <nav className="flex gap-3">
-      <Link href="/" className="hover:opacity-50 sm:font-bold">Home</Link>
-      <Link href="/skills" className="hover:opacity-50 sm:font-bold">Skills</Link>
-      <Link href="/blog" className="hover:opacity-50 sm:font-bold">Blog</Link> 
-      <Link href="/about" className="hover:opacity-50 sm:font-bold">About</Link>  
+    <nav className="flex gap-3 sunshine">
+      <Link href="/" className="opacity-50 hover:opacity-100 transition duration-1000 ease-in-out">Home</Link>
+      <Link href="/skills" className="opacity-50 hover:opacity-100 transition duration-1000 ease-in-out">Skills</Link>
+      <Link href="/blog" className="opacity-50 hover:opacity-100 transition duration-1000 ease-in-out">Blog</Link> 
+      <Link href="/about" className="opacity-50 hover:opacity-100 transition duration-1000 ease-in-out">About</Link>  
     </nav> 
   );
 };
 
 const NavLinks: React.FC<NavLinksProps> = ({ close }) => (
-  <nav className="flex flex-col text-default items-start gap-10 mt-60">
-    <Link href="/" onClick={close} className="text-2xl hover:opacity-50">
+  <nav className="w-full z-200 flex bg_sunshine text-default justify-center gap-8 mt-24 py-8">
+    <Link href="/" onClick={close} className="hover:opacity-50">
       Home
     </Link>
-    <Link href="/skills" onClick={close} className="text-2xl hover:opacity-50">
+    <Link href="/skills" onClick={close} className="hover:opacity-50">
       Skills
     </Link>
-    <Link href="/blog" onClick={close} className="text-2xl hover:opacity-50">
+    <Link href="/blog" onClick={close} className="hover:opacity-50">
       Blog
     </Link>
-    <Link href="/about" onClick={close} className="text-2xl hover:opacity-50">
+    <Link href="/about" onClick={close} className="hover:opacity-50">
       About
     </Link>
   </nav>
@@ -50,26 +50,24 @@ const NavLinks: React.FC<NavLinksProps> = ({ close }) => (
 const MobileMenu: React.FC<MobileMenuProps> = ({ isopen, mobile, toggleMenu }) => {
   return ( 
     <div>
-      { mobile && 
-        <FaBars 
-          className="cursor-pointer mr-4"
-          onClick={toggleMenu}
-          size={30}
-        /> 
-      }
-
-      { isopen && 
-        <div className="fixed top-0 left-0 w-full h-full bg-black/70" onClick={toggleMenu}>
-          <div className="absolute top-0 left-0 w-full h-full bg-black/70 px-20 text-silver" >
+      { isopen ?
+        <div className="fixed top-0 left-0 w-full h-full" onClick={toggleMenu}>
+          <div className="absolute top-0 left-0 w-full h-full text-silver" >
             <NavLinks close={toggleMenu} />
           
             <FaTimes
-              className="absolute right-1 top-20 mr-4"
+              className="absolute sunshine right-1 top-6 mr-4"
               onClick={toggleMenu}
               size={30}
             /> 
           </div>
         </div> 
+        : 
+        <FaBars 
+          className="cursor-pointer mr-4 sunshine"
+          onClick={toggleMenu}
+          size={30}
+        />
       }
     </div> 
   );
@@ -82,10 +80,10 @@ const Nav: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
     
   return (
-    <div className="flex justify-between items-center py-1 sm:px-20 bg_midnight text-default position-fixed top-0">
-      <Link href='/' className="flex items-center hover:opacity-50">
+    <div className="flex justify-between items-center py-4 sm:px-20 bg_midnight text-default position-fixed top-0">
+      <Link href='/' className="flex items-center opacity-60 hover:opacity-90">
         <Image src={'/logo-.png'} alt='logo' className="w-[80px] sm:w-[150px]" width={100} height={150} priority />
-        <h3 className="text-default  font-bold sm:text-3xl" style={{marginLeft:'-15px'}}>Abilitax</h3>
+        <h3 className="text-default font-bold sm:text-2xl" style={{marginLeft:'-15px'}}>Abilitax</h3>
       </Link>
 
       {isMobile ? 

@@ -45,7 +45,7 @@ const SkillsCategories = async () => {
     <div className='mb-24'>
       <div className='flex flex-col gap-16'>
         {data?.map(d => (
-          <article className='bg_midnight text-default flex flex-col px-8 py-8 gap-1 mx-auto w-3/4 sm:w-1/2 rounded' key={d.name}>
+          <article className='bg_midnight text-default flex flex-col px-8 py-8 gap-1 mx-4 sm:mx-auto sm:w-3/4 lg:w-1/2 rounded' key={d.name}>
             <SkillCard skill={d} />
           </article>
         ) ) } 

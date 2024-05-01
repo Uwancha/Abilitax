@@ -108,6 +108,14 @@ body {
   color: #51b848;  
 }
 
+.sunshine {
+  color: #febf10;
+}
+
+.bg_sunshine {
+  background-color: #febf10;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);

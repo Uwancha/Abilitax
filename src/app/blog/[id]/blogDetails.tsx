@@ -98,17 +98,17 @@ const Details: React.FC<DetailsProps> = ({post}) => {
         alt={post.title} 
         className='w-full sm:w-2/4 mx-auto'
       />
-      <div className='sm:w-2/4 mx-auto py-20 sm:px-5 midnight bg-white rounded-lg text-xl '>
-        <div className="mb-8 pl-5" >
+      <div className='sm:w-2/4 mx-auto py-20 sm:px-5 midnight bg-default rounded-lg text-xl '>
+        <div className="mb-8 pl-5 flex items-center gap-4" >
           <img src={post.authorImage} className="authorImage" alt="Author's image" />
           <div>
-            <p className='sm:font-bold mb-.5' >{post.author}</p>
+            <p className='sm:font-semi-bold mb-.5' >{post.author}</p>
             <p>{formatedDate}</p>
           </div>
         </div>
-        <h3 className='sm:text-2xl text-center font-bold mb-5 '>{post.title}</h3>
+        <h3 className='sm:text-xl text-center font-bold mb-5 '>{post.title}</h3>
       
-        <section className='my-10'>
+        <section className='my-10 midnight'>
           <div>
             <h5 className='mb-3 pl-5 sm:pl-10 font-bold'>Introduction</h5>
             {introductionElements}

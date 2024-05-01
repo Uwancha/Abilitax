@@ -12,10 +12,10 @@ export default function Home() {
     <main>
         <Layout > 
         <div>
-            <header className='w-full h-screen text-default flex flex-col gap-16 bg_midnight pt-8'>
+            <header className='w-full h-1/2 lg:h-scre text-default flex flex-col gap-24 bg_midnight pt-8 pb-16'>
                 <Nav />
-                <div className='flex flex-col gap-16 items-center'>
-                    <h1 className='text-xl font-bold mt-20 sm:text-3xl '
+                <div className='flex flex-col gap-24 items-center'>
+                    <h1 className='text-xl font-bold sm:text-3xl '
                     >
                         Collections of curated resources!
                     </h1>
@@ -32,10 +32,10 @@ export default function Home() {
                 </div>
             </header>
 
-            <article id='talents' className='w-full flex flex-col gap-16 bg-default px-8 py-24'>
+            <article id='talents' className='w-full flex flex-col gap-16 bg-default px-8 py-16'>
                 <h3 className='midnight font-bold text-2xl lg:text-3xl text-center mb-8'>Most Sought-After Talents</h3>
                 
-                <div className='w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16'>
+                <div className='sm:w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16'>
                     <section className='skill-card midnight pb-5 hover:shadow hover:scale-105 transition duration-500 ease-in-out' > 
                         <Image src={'/web-development-.png'} className='w-full ' width={100} height={100} alt='' quality={100} priority unoptimized />
                         <h4 className='font-bold text-xl pl-5 mt-5 mb-2'>Web Development</h4>
