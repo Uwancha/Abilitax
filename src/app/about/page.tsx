@@ -4,13 +4,10 @@ import Image from 'next/image';
 
 // Layout and components
 import Layout from './layout';
-import Nav from '../components/Header';
-import Footer from '../components/Footer';
 
 const About = () => {
     return (
         <Layout >
-            <Nav />
             <div className='w-full bg-default'>
                 <section className='midnight sm:w-3/5 mx-auto flex flex-col gap-8 mt-10 pb-20 px-4' >
                     <h1 className='text-center text-3xl mt-4'>About Abilitax</h1>
@@ -62,8 +59,6 @@ const About = () => {
                     </Link>
                 </div>
             </div>
-
-            <Footer />
         </Layout>
     );
 };

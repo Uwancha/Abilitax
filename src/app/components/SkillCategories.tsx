@@ -33,8 +33,7 @@ const fetchData = async () => {
       return null;
     };
   } catch (error) {
-    console.error('Error fetching document:', error);
-    return null;
+    throw Error;
   };
 };
 

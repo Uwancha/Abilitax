@@ -1,5 +1,4 @@
 import Details from './blogDetails';
-import Nav from '@/app/components/Header';
 
 // Firebase configuration
 import { db } from '@/app/firebaseConfig';
@@ -41,8 +40,7 @@ async function getBlogDetails(id: string): Promise<Post | null> {
     };
     
   } catch (error) {
-    console.log('An error has occured', error);
-    return null;
+    throw Error;
   };
 };
 
@@ -54,20 +52,17 @@ export default async function BlogDetail({params}: BlogDetailsPageProps) {
   const post = await getBlogDetails(params.id);
 
   return (
-    <>
-      <Nav/>
-      <div className='bg-whitesmoke'>
-        {post !== null ? (
-          <Details post={post} />
-        ) 
+    <div className='bg-whitesmoke pb-16'>
+      {post !== null ? (
+        <Details post={post} />
+      ) 
         : 
-        (
-          <div className='flex flex-col gap-8 my-24'>
-            <p className='midnight text-xl'>Network problem occurred</p>
-            <p className='lime text-xl'>Please refresh the page!</p>
-          </div>
-        )}  
-      </div>
-    </>
+      (
+        <div className='flex flex-col gap-8 my-24'>
+          <p className='midnight text-xl'>Network problem occurred</p>
+          <p className='lime text-xl'>Please refresh the page!</p>
+        </div>
+      )}  
+    </div>
   );
 };

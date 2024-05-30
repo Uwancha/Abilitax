@@ -22,8 +22,8 @@ const fetchData = async () => {
     const docRef = collection(db, 'blogs');
     const docs = await getDocs(docRef);
     
-    const blogs: BlogPost[]  = [];
-
+    const blogs: BlogPost[]  = [];  
+  
     docs.forEach((doc) =>{
       const data = doc.data();
       const blog: BlogPost = {
@@ -45,8 +45,7 @@ const fetchData = async () => {
       return null;
     };
   } catch (error) {
-    console.error('Error fetching document:', error);
-    return null;
+    throw Error;
   };
 };
 

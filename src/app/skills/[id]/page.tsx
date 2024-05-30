@@ -6,9 +6,6 @@ import Loading from "../loading";
 // Firebase configurations
 import { db } from '../../firebaseConfig';
 import { collection, doc, getDoc} from 'firebase/firestore';
-import Nav from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-
 
 // Define interfaces
 
@@ -44,36 +41,23 @@ async function getSkillDetails(id: string): Promise<Skill | null>  {
       console.error('Skill does not exist');
       return null;
     }
-  
   } catch (error) {
-    console.error('Error fetching skill details:', error);
-    return null
-  }
-}
+    throw Error;
+  };
+};
 
-interface SkillDetailsPageProps {
-  params: { id: string };
-}
-
-
-export default async function SkillDetailsPage({params} : SkillDetailsPageProps) {
+export default async function SkillDetailsPage({ params } : {params: { id: string }}) {
   const skill = await getSkillDetails(params.id)
 
   return (
-    <>
-      <Nav />
-      <div className='skill-details sm:py-10'>
-        <Layout metaTitle={'Skill details | Abilitax'}>
-          <Suspense fallback={<Loading />} >
-          {skill !== null ? (
-              <SkillDetails skill={skill} />
-            ) : (
-              <p>Loading...</p>
-            )}
-          </Suspense>
-        </Layout>
-      </div>
-      <Footer />
-    </>
+    <div className='skill-details sm:py-10'>
+      <Layout metaTitle={'Skill details | Abilitax'}>
+        <Suspense fallback={<Loading />} >
+          { skill !== null && 
+            <SkillDetails skill={skill} />
+          }
+        </Suspense>
+      </Layout>
+    </div>
   )
-}
+};

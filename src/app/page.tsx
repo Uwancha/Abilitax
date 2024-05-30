@@ -4,16 +4,12 @@ import Link from 'next/link';
 // Layout component
 import Layout from './components/layoutHome';
 
-// components
-import Nav from './components/Header';
-
 export default function Home() {
   return (
     <main>
         <Layout > 
         <div>
             <header className='w-full h-1/2 lg:h-scre text-default flex flex-col gap-24 bg_midnight pt-8 pb-16'>
-                <Nav />
                 <div className='flex flex-col gap-24 items-center'>
                     <h1 className='text-xl font-bold sm:text-3xl '
                     >
